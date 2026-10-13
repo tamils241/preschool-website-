@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stackly Preschool — a joyful early learning centre where curious little minds play, create and grow. Explore programs, book a school tour and enrol for 2026–2027." />
+  <meta name="theme-color" content="#4cc3f0" />
+  <title>Stackly Preschool | Little Steps Today, Big Dreams Tomorrow</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body data-page="home">
+
+  <!-- Shared header + navigation (injected by navigation.js) -->
+  <div data-component="header"></div>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy" data-reveal="up">
+          <span class="eyebrow">Preschool · Kindergarten · Daycare</span>
+          <h1 id="hero-title">Little Steps Today,<br /><span class="hl">Big Dreams Tomorrow!</span></h1>
+          <p class="lead">At Stackly Preschool, learning begins with play. Our warm, colourful classrooms nurture curiosity, creativity and confidence — helping every child grow into a happy, independent little learner.</p>
+          <div class="btn-group">
+            <a href="programs.html" class="btn btn-primary">Explore Our Programs</a>
+            <a href="contact.html#tour" class="btn btn-outline">Book a School Tour</a>
+          </div>
+          <div class="hero-badges">
+            <span class="pill"><span class="dot"></span> Ages 1.5 – 6 years</span>
+            <span class="pill"><span class="dot" style="background:var(--orange)"></span> Safe &amp; CCTV secured</span>
+            <span class="pill"><span class="dot" style="background:var(--sky)"></span> Certified educators</span>
+          </div>
+        </div>
+
+        <div class="hero-media" data-reveal="left" data-reveal-delay="120">
+          <div class="slider" data-slider data-autoplay="5000" aria-label="Preschool photo gallery">
+            <div class="slider__track">
+              <div class="slide active" data-caption="A bright and welcoming classroom made for curious minds">
+                <img src="images/hero/hero-1.webp" alt="Bright Stackly Preschool classroom with playful learning materials" width="800" height="600" />
+              </div>
+              <div class="slide" data-caption="Creative art sessions that spark imagination every day">
+                <img src="images/hero/hero-2.webp" alt="Children enjoying a creative art session with colourful paints" width="800" height="600" loading="lazy" />
+              </div>
+              <div class="slide" data-caption="Hands-on play that builds real early-learning skills">
+                <img src="images/hero/hero-3.webp" alt="Children solving puzzles and building blocks together" width="800" height="600" loading="lazy" />
+              </div>
+            </div>
+            <button class="slider__arrow prev" type="button" aria-label="Previous slide">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+            </button>
+            <button class="slider__arrow next" type="button" aria-label="Next slide">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+            <div class="slider__caption" data-slider-caption>A bright and welcoming classroom made for curious minds</div>
+            <div class="slider__dots" data-slider-dots aria-label="Choose slide"></div>
+          </div>
+
+          <div class="hero-float pos-a float-sm" aria-hidden="true">
+            <span class="ico" style="background:var(--mint-050)">🧸</span>
+            <span>Happy Kids<small>500+ families</small></span>
+          </div>
+          <div class="hero-float pos-b float" aria-hidden="true">
+            <span class="ico" style="background:var(--yellow-050)">⭐</span>
+            <span>4.9 Rating<small>Parent reviews</small></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated statistics -->
+      <div class="container">
+        <div class="stats" data-reveal="up" data-reveal-delay="150">
+          <div class="stat">
+            <span class="stat__num" data-count="520" data-suffix="+">0</span>
+            <span class="stat__label">Happy Children</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="35" data-suffix="+">0</span>
+            <span class="stat__label">Experienced Teachers</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="60" data-suffix="+">0</span>
+            <span class="stat__label">Learning Activities</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="12" data-suffix=" yrs">0</span>
+            <span class="stat__label">Of Loving Care</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INTRO ================= -->
+    <section class="section" aria-labelledby="intro-title">
+      <div class="container split">
+        <div class="split__media offset" data-reveal="right">
+          <img src="images/hero/hero-1.webp" alt="Stackly Preschool bright learning classroom" width="800" height="600" loading="lazy" />
+          <img src="images/hero/hero-2.webp" alt="Cozy play corner with toys and soft seating" width="400" height="300" loading="lazy" />
+        </div>
+        <div class="split__copy" data-reveal="left" data-reveal-delay="100">
+          <span class="eyebrow pink">Welcome to Stackly</span>
+          <h2 id="intro-title">Where every child feels at home and ready to explore</h2>
+          <p>Stackly Preschool is a child-centred early learning centre for children aged 1.5 to 6 years. We blend structured learning with free play, so children build language, motor, social and thinking skills at their own happy pace.</p>
+          <ul class="checklist">
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span> Play-based curriculum designed by early-childhood experts</li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span> Small class groups with individual attention</li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span> Safe, hygienic and CCTV-monitored campus</li>
+            <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span> Daily progress updates for parents</li>
+          </ul>
+          <div class="btn-group">
+            <a href="about.html" class="btn btn-sky">More About Us</a>
+            <a href="facilities.html" class="btn btn-outline">See Our Facilities</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROGRAMS ================= -->
+    <section class="section section--tint" aria-labelledby="programs-title">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <span class="eyebrow mint">Learning Programs</span>
+          <h2 id="programs-title">A program for every little step</h2>
+          <p class="lead">Age-appropriate programs that grow with your child — each one packed with play, discovery and gentle guidance.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card" data-reveal="up">
+            <div class="card__media">
+              <img src="images/programs/toddler.webp" alt="Toddler program with soft toys and sensory play" width="800" height="550" loading="lazy" />
+              <span class="card__badge pink">1.5 – 2.5 yrs</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Toddler Program</h3>
+              <p class="card__text">A gentle first step away from home, focused on comfort, sensory play and early independence.</p>
+              <div class="card__foot"><a href="programs.html#toddler" class="btn btn-outline btn-sm">Learn More</a></div>
+            </div>
+          </article>
+
+          <article class="card" data-reveal="up" data-reveal-delay="90">
+            <div class="card__media">
+              <img src="images/programs/playgroup.webp" alt="Playgroup children with balloons and group games" width="800" height="550" loading="lazy" />
+              <span class="card__badge orange">2 – 3 yrs</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Playgroup</h3>
+              <p class="card__text">Social play, music and movement that build confidence, sharing and first friendships.</p>
+              <div class="card__foot"><a href="programs.html#playgroup" class="btn btn-outline btn-sm">Learn More</a></div>
+            </div>
+          </article>
+
+          <article class="card" data-reveal="up" data-reveal-delay="180">
+            <div class="card__media">
+              <img src="images/programs/nursery.webp" alt="Nursery class with art and learning materials" width="800" height="550" loading="lazy" />
+              <span class="card__badge mint">3 – 4 yrs</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Nursery</h3>
+              <p class="card__text">Early literacy, numbers, colours and shapes through stories, songs and hands-on art.</p>
+              <div class="card__foot"><a href="programs.html#nursery" class="btn btn-outline btn-sm">Learn More</a></div>
+            </div>
+          </article>
+
+          <article class="card" data-reveal="up">
+            <div class="card__media">
+              <img src="images/programs/lkg.webp" alt="Lower kindergarten letter learning activity" width="800" height="550" loading="lazy" />
+              <span class="card__badge mint">4 – 5 yrs</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Lower Kindergarten</h3>
+              <p class="card__text">Phonics, pre-writing and simple problem solving that prepare children for school life.</p>
+              <div class="card__foot"><a href="programs.html#lkg" class="btn btn-outline btn-sm">Learn More</a></div>
+            </div>
+          </article>
+
+          <article class="card" data-reveal="up" data-reveal-delay="90">
+            <div class="card__media">
+              <img src="images/programs/ukg.webp" alt="Upper kindergarten graduation cap and school readiness" width="800" height="550" loading="lazy" />
+              <span class="card__badge pink">5 – 6 yrs</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Upper Kindergarten</h3>
+              <p class="card__text">Confident readers and thinkers, fully ready for a smooth transition to primary school.</p>
+              <div class="card__foot"><a href="programs.html#ukg" class="btn btn-outline btn-sm">Learn More</a></div>
+            </div>
+          </article>
+
+          <article class="card" data-reveal="up" data-reveal-delay="180">
+            <div class="card__media">
+              <img src="images/programs/consult.webp" alt="Consultation with admissions team" width="800" height="550" loading="lazy" />
+              <span class="card__badge sky">Free</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Not sure which program fits?</h3>
+              <p class="card__text">Talk to our admissions team — we will help you choose the perfect start for your child.</p>
+              <div class="card__foot"><a href="admissions.html" class="btn btn-outline btn-sm">Enquire Now</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY CHOOSE US ================= -->
+    <section class="section" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <span class="eyebrow">Why Stackly</span>
+          <h2 id="why-title">Why parents choose Stackly Preschool</h2>
+          <p class="lead">A safe, joyful environment where your child is genuinely known, loved and encouraged to shine.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <article class="feature" data-reveal="up">
+            <div class="feature__ico ico-sky" aria-hidden="true">🛡️</div>
+            <h3>Safety First</h3>
+            <p>Secured entry, CCTV monitoring, sanitised spaces and trained first-aid staff.</p>
+          </article>
+          <article class="feature" data-reveal="up" data-reveal-delay="80">
+            <div class="feature__ico ico-warm" aria-hidden="true">👩‍🏫</div>
+            <h3>Expert Teachers</h3>
+            <p>Qualified early-childhood educators who truly love teaching little ones.</p>
+          </article>
+          <article class="feature" data-reveal="up" data-reveal-delay="160">
+            <div class="feature__ico ico-mint" aria-hidden="true">🧠</div>
+            <h3>Play-Based Learning</h3>
+            <p>Every game is designed to build real cognitive, social and motor skills.</p>
+          </article>
+          <article class="feature" data-reveal="up" data-reveal-delay="240">
+            <div class="feature__ico ico-yellow" aria-hidden="true">📱</div>
+            <h3>Parent Connection</h3>
+            <p>Regular updates, open days and easy communication with teachers.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DAILY ACTIVITIES ================= -->
+    <section class="section section--sky" aria-labelledby="day-title">
+      <div class="container split reverse">
+        <div class="split__copy" data-reveal="right" data-reveal-delay="100">
+          <span class="eyebrow mint">A Day at Stackly</span>
+          <h2 id="day-title">Daily activities and rich learning experiences</h2>
+          <p>Each day balances active play with calm, focused learning. Children move between art, music, stories, outdoor time and sensory exploration — always with gentle guidance and lots of encouragement.</p>
+          <div class="grid" style="grid-template-columns:1fr 1fr;gap:1rem">
+            <div class="pill" style="justify-content:flex-start">🎨 Art &amp; Craft</div>
+            <div class="pill" style="justify-content:flex-start">🎵 Music &amp; Dance</div>
+            <div class="pill" style="justify-content:flex-start">📖 Storytelling</div>
+            <div class="pill" style="justify-content:flex-start">⚽ Outdoor Games</div>
+            <div class="pill" style="justify-content:flex-start">🌿 Nature Time</div>
+            <div class="pill" style="justify-content:flex-start">✋ Sensory Play</div>
+          </div>
+          <div class="btn-group" style="margin-top:1.6rem">
+            <a href="activities.html" class="btn btn-mint">View All Activities</a>
+          </div>
+        </div>
+        <div class="split__media" data-reveal="left">
+          <img src="images/activities/art.webp" alt="Children taking part in a creative art and craft activity" width="800" height="600" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TEACHERS ================= -->
+    <section class="section" aria-labelledby="teachers-title">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <span class="eyebrow pink">Meet the Team</span>
+          <h2 id="teachers-title">Caring teachers your child will love</h2>
+          <p class="lead">Warm, qualified and endlessly patient — our educators make every child feel safe to explore.</p>
+        </div>
+
+        <div class="grid grid-4">
+          <article class="card teacher-card" data-reveal="up">
+            <div class="card__media"><img src="images/teachers/teacher-1.webp" alt="Ms. Ava Thompson, Lead Preschool Teacher" width="800" height="800" loading="lazy" /></div>
+            <div class="card__body">
+              <h3 class="card__title">Ms. Ava Thompson</h3>
+              <p class="role">Lead Preschool Teacher</p>
+              <p class="card__text">M.Ed. Early Childhood · 11 years experience</p>
+            </div>
+          </article>
+          <article class="card teacher-card" data-reveal="up" data-reveal-delay="80">
+            <div class="card__media"><img src="images/teachers/teacher-2.webp" alt="Ms. Priya Nair, Nursery Teacher" width="800" height="800" loading="lazy" /></div>
+            <div class="card__body">
+              <h3 class="card__title">Ms. Priya Nair</h3>
+              <p class="role">Nursery Teacher</p>
+              <p class="card__text">B.Ed. · Specialises in early literacy</p>
+            </div>
+          </article>
+          <article class="card teacher-card" data-reveal="up" data-reveal-delay="160">
+            <div class="card__media"><img src="images/teachers/teacher-3.webp" alt="Mr. Daniel Ross, Music and Movement Teacher" width="800" height="800" loading="lazy" /></div>
+            <div class="card__body">
+              <h3 class="card__title">Mr. Daniel Ross</h3>
+              <p class="role">Music &amp; Movement</p>
+              <p class="card__text">B.A. Music · 8 years with young learners</p>
+            </div>
+          </article>
+          <article class="card teacher-card" data-reveal="up" data-reveal-delay="240">
+            <div class="card__media"><img src="images/teachers/teacher-4.webp" alt="Ms. Sofia Marin, Kindergarten Teacher" width="800" height="800" loading="lazy" /></div>
+            <div class="card__body">
+              <h3 class="card__title">Ms. Sofia Marin</h3>
+              <p class="role">Kindergarten Teacher</p>
+              <p class="card__text">M.A. Education · School-readiness expert</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="text-center" style="margin-top:2.5rem" data-reveal="up">
+          <a href="teachers.html" class="btn btn-sky">Meet All Teachers</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="section section--pink" aria-labelledby="testi-title">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <span class="eyebrow pink">Happy Parents</span>
+          <h2 id="testi-title">Loved by families in our community</h2>
+        </div>
+
+        <div class="testimonials" data-testi data-autoplay="6500" data-reveal="up">
+          <div class="testi-viewport">
+            <div class="testi-track" data-testi-track>
+              <div class="testi-slide">
+                <figure class="testi-card">
+                  <div class="testi-stars" aria-label="Rated 5 out of 5">★★★★★</div>
+                  <blockquote class="testi-quote">"My daughter runs into Stackly every morning with a huge smile. The teachers are so warm and she has grown in confidence beyond our expectations."</blockquote>
+                  <figcaption class="testi-person">
+                    <img src="images/teachers/teacher-2.webp" alt="" aria-hidden="true" width="52" height="52" loading="lazy" />
+                    <span><strong>Rebecca Lane</strong><span>Mother of Zoe, Age 4</span></span>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="testi-slide">
+                <figure class="testi-card">
+                  <div class="testi-stars" aria-label="Rated 5 out of 5">★★★★★</div>
+                  <blockquote class="testi-quote">"The daily updates and photos mean we never miss a milestone. Stackly feels like an extended family, not just a school."</blockquote>
+                  <figcaption class="testi-person">
+                    <img src="images/teachers/teacher-4.webp" alt="" aria-hidden="true" width="52" height="52" loading="lazy" />
+                    <span><strong>Marcus Chen</strong><span>Father of Leo, Age 3</span></span>
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="testi-slide">
+                <figure class="testi-card">
+                  <div class="testi-stars" aria-label="Rated 5 out of 5">★★★★★</div>
+                  <blockquote class="testi-quote">"The balance of play and learning is perfect. Our son started reading simple words before kindergarten and still thinks it is all a game!"</blockquote>
+                  <figcaption class="testi-person">
+                    <img src="images/teachers/teacher-1.webp" alt="" aria-hidden="true" width="52" height="52" loading="lazy" />
+                    <span><strong>Anita Sharma</strong><span>Mother of Aarav, Age 5</span></span>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="testi-nav">
+            <button class="slider__arrow" type="button" data-testi-prev aria-label="Previous testimonial">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+            </button>
+            <div class="testi-dots" data-testi-dots aria-label="Choose testimonial"></div>
+            <button class="slider__arrow" type="button" data-testi-next aria-label="Next testimonial">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EVENTS ================= -->
+    <section class="section" aria-labelledby="events-title">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <span class="eyebrow orange">What's On</span>
+          <h2 id="events-title">Upcoming events and school activities</h2>
+          <p class="lead">From sports days to storytelling festivals, there is always something joyful happening at Stackly.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card" data-reveal="up">
+            <div class="card__media">
+              <img src="images/events/annual-day.webp" alt="Annual day celebration on stage" width="800" height="550" loading="lazy" />
+              <span class="card__badge orange">Mar 14</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Annual Day Celebration</h3>
+              <p class="card__text">An evening of songs, dances and proud little performers on stage.</p>
+            </div>
+          </article>
+          <article class="card" data-reveal="up" data-reveal-delay="90">
+            <div class="card__media">
+              <img src="images/events/sports-day.webp" alt="Children competing at sports day" width="800" height="550" loading="lazy" />
+              <span class="card__badge mint">Apr 05</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Little Champions Sports Day</h3>
+              <p class="card__text">Fun races, team games and medals for every happy participant.</p>
+            </div>
+          </article>
+          <article class="card" data-reveal="up" data-reveal-delay="180">
+            <div class="card__media">
+              <img src="images/events/story-day.webp" alt="Storytelling day with children listening to a story" width="800" height="550" loading="lazy" />
+              <span class="card__badge">Apr 22</span>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Storytelling Festival</h3>
+              <p class="card__text">Puppets, costumes and imaginative tales to spark a love of reading.</p>
+            </div>
+          </article>
+        </div>
+        <div class="text-center" style="margin-top:2.5rem" data-reveal="up">
+          <a href="events.html" class="btn btn-primary">See All Events</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALLERY PREVIEW ================= -->
+    <section class="section section--tint" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <span class="eyebrow">Peek Inside</span>
+          <h2 id="gallery-title">Moments of joy and discovery</h2>
+        </div>
+        <div class="gallery-grid" data-reveal="up">
+          <figure class="gallery-item"><img src="images/gallery/gallery-1.webp" alt="Children painting during art day" width="800" height="600" loading="lazy" /></figure>
+          <figure class="gallery-item"><img src="images/gallery/gallery-3.webp" alt="Story time with the class" width="800" height="600" loading="lazy" /></figure>
+          <figure class="gallery-item"><img src="images/gallery/gallery-2.webp" alt="Outdoor playground fun" width="800" height="600" loading="lazy" /></figure>
+          <figure class="gallery-item"><img src="images/gallery/gallery-5.webp" alt="Annual day celebration" width="800" height="600" loading="lazy" /></figure>
+          <figure class="gallery-item"><img src="images/gallery/gallery-4.webp" alt="Music class in progress" width="800" height="600" loading="lazy" /></figure>
+          <figure class="gallery-item"><img src="images/gallery/gallery-6.webp" alt="Nature walk exploration" width="800" height="600" loading="lazy" /></figure>
+        </div>
+        <div class="text-center" style="margin-top:2.5rem" data-reveal="up">
+          <a href="gallery.html" class="btn btn-sky">Open Full Gallery</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ADMISSION CTA ================= -->
+    <section class="section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-band" data-reveal="zoom">
+          <h2 id="cta-title">Ready to give your child a joyful start?</h2>
+          <p>Admissions are open for 2026 – 2027. Book a friendly school tour, meet our teachers and see the Stackly difference for yourself.</p>
+          <div class="btn-group">
+            <a href="admissions.html" class="btn btn-white btn-lg">Apply for Admission</a>
+            <a href="contact.html#tour" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.7);color:#fff">Book a School Tour</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NEWSLETTER ================= -->
+    <section class="section section--sky" aria-labelledby="news-title">
+      <div class="container">
+        <div class="section-head" data-reveal="up">
+          <span class="eyebrow">Stay in the Loop</span>
+          <h2 id="news-title">Join the Stackly newsletter</h2>
+          <p class="lead">Get seasonal activity ideas, parenting tips and school updates — straight to your inbox.</p>
+        </div>
+        <form class="form-card newsletter-form light mx-auto" style="max-width:560px;display:block" data-newsletter novalidate data-reveal="up">
+          <div style="display:flex;gap:.75rem;flex-wrap:wrap">
+            <label class="sr-only" for="homeNewsletter">Email address</label>
+            <input type="email" id="homeNewsletter" name="newsletter" placeholder="Enter your email address" autocomplete="email" required style="flex:1 1 240px" />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+          <p class="newsletter-msg" data-newsletter-msg aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared footer (injected by navigation.js) -->
+  <div data-component="footer"></div>
+
+  <script src="js/navigation.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/slider.js" defer></script>
+</body>
+</html>

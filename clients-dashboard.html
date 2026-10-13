@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stackly Preschool parent dashboard — daily updates, attendance, photos, activities, events and fees for your child." />
+  <meta name="theme-color" content="#4cc3f0" />
+  <title>Parent Dashboard | Stackly Preschool</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body data-page="clients-dashboard">
+
+  <a class="skip-link" href="#dashMain">Skip to content</a>
+
+  <div class="dash">
+    <div data-dash-side></div>
+
+    <div class="dash-body">
+      <div data-dash-top data-title="Parent Dashboard" data-subtitle="Monday, 14 October 2026" data-search="Search updates…"></div>
+
+      <main class="dash-main" id="dashMain">
+
+        <section class="dash-hero warm" data-reveal="up">
+          <span class="dash-hero__blob a" aria-hidden="true"></span>
+          <span class="dash-hero__blob b" aria-hidden="true"></span>
+          <div class="dash-hero__copy">
+            <h2>Hello, Sara! &#128075;</h2>
+            <p>Here's a quick look at <span data-child-name>Emma</span>'s day at Stackly — 100% attendance this week and 3 new photos.</p>
+          </div>
+          <div class="dash-hero__actions">
+            <div class="child-switch">
+              <button type="button" class="child-chip is-active" data-child="Emma"><span class="child-chip__av">E</span> Emma</button>
+              <button type="button" class="child-chip" data-child="Noah"><span class="child-chip__av" style="background:var(--grad-mint)">N</span> Noah</button>
+            </div>
+            <a class="btn btn-white" href="#">Message Teacher</a>
+          </div>
+        </section>
+
+        <section class="dash-stats" aria-label="Key numbers">
+          <article class="dash-stat" data-reveal="up">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-sky">&#128197;</span><span class="dash-stat__delta">+2%</span></div>
+            <span class="dash-stat__num">96%</span>
+            <span class="dash-stat__label">Attendance</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="70">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-warm">&#127912;</span><span class="dash-stat__delta">This term</span></div>
+            <span class="dash-stat__num">8</span>
+            <span class="dash-stat__label">Activities joined</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="140">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-mint">&#128247;</span><span class="dash-stat__delta">Today</span></div>
+            <span class="dash-stat__num">3</span>
+            <span class="dash-stat__label">New photos</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="210">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-yellow">&#128179;</span><span class="dash-stat__delta">All clear</span></div>
+            <span class="dash-stat__num">$0</span>
+            <span class="dash-stat__label">Fees due</span>
+          </article>
+        </section>
+
+        <div class="dash-grid split-2">
+          <section class="panel" data-reveal="up">
+            <div class="panel__head">
+              <h2>Today at preschool</h2>
+              <span class="pill info">Monday</span>
+            </div>
+            <div class="panel__body">
+              <div class="timeline">
+                <div class="tl-item">
+                  <span class="tl-dot ico-sky">&#9728;&#65039;</span>
+                  <div><span class="tl-time">8:15 AM</span><h4>Morning Circle</h4><p>Sang the welcome song and shared weekend news with friends.</p></div>
+                </div>
+                <div class="tl-item">
+                  <span class="tl-dot ico-mint">&#128290;</span>
+                  <div><span class="tl-time">9:40 AM</span><h4>Phonics &amp; Numbers</h4><p>Practised letters A–F and counting all the way to 20.</p></div>
+                </div>
+                <div class="tl-item">
+                  <span class="tl-dot ico-warm">&#127912;</span>
+                  <div><span class="tl-time">11:15 AM</span><h4>Art &amp; Craft</h4><p>Made a colourful paper collage of a rainbow.</p></div>
+                </div>
+                <div class="tl-item">
+                  <span class="tl-dot ico-yellow">&#127869;&#65039;</span>
+                  <div><span class="tl-time">12:30 PM</span><h4>Lunch &amp; Rest</h4><p>Ate a good lunch and rested quietly for 45 minutes.</p></div>
+                </div>
+                <div class="tl-item">
+                  <span class="tl-dot ico-pink">&#9917;</span>
+                  <div><span class="tl-time">3:00 PM</span><h4>Outdoor Play</h4><p>Built sandcastles in the sandpit with two friends.</p></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" data-reveal="up" data-reveal-delay="80">
+            <div class="panel__head">
+              <h2>Upcoming events</h2>
+              <a class="link" href="events.html">All events</a>
+            </div>
+            <div class="panel__body">
+              <div class="dash-list">
+                <div class="dash-item">
+                  <span class="dash-item__ico ico-warm">&#127882;</span>
+                  <div class="dash-item__body"><h4>Annual Day</h4><p>School auditorium</p><time>Nov 20 · 5:00 PM</time></div>
+                </div>
+                <div class="dash-item">
+                  <span class="dash-item__ico ico-sky">&#128172;</span>
+                  <div class="dash-item__body"><h4>Parent–Teacher Meeting</h4><p>Blue Room</p><time>Nov 26 · 4:00 PM</time></div>
+                </div>
+                <div class="dash-item">
+                  <span class="dash-item__ico ico-mint">&#127939;</span>
+                  <div class="dash-item__body"><h4>Sports Day</h4><p>Main playground</p><time>Dec 05 · 9:00 AM</time></div>
+                </div>
+                <div class="dash-item">
+                  <span class="dash-item__ico ico-yellow">&#128218;</span>
+                  <div class="dash-item__body"><h4>Story Day</h4><p>Library corner</p><time>Dec 12 · 10:00 AM</time></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="dash-grid split-2">
+          <section class="panel" data-reveal="up">
+            <div class="panel__head">
+              <h2>Latest photos</h2>
+              <a class="link" href="gallery.html">View gallery</a>
+            </div>
+            <div class="panel__body">
+              <div class="dash-gallery">
+                <a href="gallery.html"><img src="images/gallery/gallery-1.webp" alt="Emma's class during art time" loading="lazy" /></a>
+                <a href="gallery.html"><img src="images/gallery/gallery-2.webp" alt="Children playing outdoors" loading="lazy" /></a>
+                <a href="gallery.html"><img src="images/gallery/gallery-3.webp" alt="Storytelling session" loading="lazy" /></a>
+                <a href="gallery.html"><img src="images/gallery/gallery-4.webp" alt="Music and movement class" loading="lazy" /></a>
+                <a href="gallery.html"><img src="images/gallery/gallery-5.webp" alt="Sensory play time" loading="lazy" /></a>
+                <a href="gallery.html"><img src="images/gallery/gallery-6.webp" alt="Outdoor games" loading="lazy" /></a>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" data-reveal="up" data-reveal-delay="80">
+            <div class="panel__head">
+              <h2>Notices</h2>
+              <a class="link" href="#">Mark read</a>
+            </div>
+            <div class="panel__body">
+              <div class="dash-list">
+                <div class="dash-item">
+                  <span class="dash-item__ico ico-sky">&#10052;&#65039;</span>
+                  <div class="dash-item__body"><h4>Winter uniform available</h4><p>Pick up from the front desk any morning.</p><time>Oct 13</time></div>
+                </div>
+                <div class="dash-item">
+                  <span class="dash-item__ico ico-mint">&#129658;</span>
+                  <div class="dash-item__body"><h4>Health check camp</h4><p>Free dental screening this Friday.</p><time>Oct 12</time></div>
+                </div>
+                <div class="dash-item">
+                  <span class="dash-item__ico ico-warm">&#128221;</span>
+                  <div class="dash-item__body"><h4>Field trip consent form</h4><p>Please sign and return by Oct 18.</p><time>Oct 10</time></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="dash-grid split-2">
+          <section class="panel" data-reveal="up">
+            <div class="panel__head">
+              <h2>Teacher's note</h2>
+              <span class="pill violet">Ms. Rivera</span>
+            </div>
+            <div class="panel__body">
+              <div class="note-card">
+                <span class="note-card__ico" aria-hidden="true">&#128172;</span>
+                <p><strong>Emma had a wonderful day!</strong> She loved the rainbow collage and kindly helped tidy the art table. Keep practising the letter sounds at home — she's getting more confident every week.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" data-reveal="up" data-reveal-delay="80">
+            <div class="panel__head">
+              <h2>Fee status</h2>
+              <span class="pill ok">Paid</span>
+            </div>
+            <div class="panel__body">
+              <div class="bar-row">
+                <div class="bar-row__top"><strong>Term 1 paid</strong><span>100%</span></div>
+                <div class="bar mint"><span style="width:100%"></span></div>
+              </div>
+              <p class="dash-muted" style="margin-top:0.5rem">No amount due. Your next invoice is scheduled for January 2027.</p>
+              <a class="btn btn-outline btn-sm" href="#" style="margin-top:1rem">Download receipts</a>
+            </div>
+          </section>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="dash-scrim" id="dashScrim" hidden></div>
+
+  <script src="js/dash-menu.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</body>
+</html>

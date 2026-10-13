@@ -1,0 +1,260 @@
+/* =========================================================
+   Stackly Preschool - responsive.css
+   Breakpoints:
+     Desktop  : >= 1200px  (base styles in style.css)
+     Laptop   : 992px  - 1199px
+     Tablet   : 768px  - 991px
+     Mobile   : 481px  - 767px
+     Sm mobile: 320px  - 480px
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   Laptop: 992px - 1199px
+   --------------------------------------------------------- */
+@media (max-width: 1199px) {
+  :root { --container: 1040px; }
+
+  /* Switch to the slide-out mobile navigation below desktop width
+     so the 10 primary links never overflow the header. */
+  .nav-links { display: none; }
+  .hamburger { display: block; }
+  .nav-cta .btn { display: none; }
+
+  .hero-float.pos-a { left: -0.75rem; }
+  .hero-float.pos-b { right: -0.5rem; }
+
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---------------------------------------------------------
+   Tablet: below 992px  (also covers mobile/small)
+   --------------------------------------------------------- */
+@media (max-width: 991px) {
+  :root { --nav-h: 68px; }
+
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-copy { text-align: center; }
+  .hero-copy p { margin-inline: auto; }
+  .hero-badges { justify-content: center; }
+  .hero-copy .btn-group { justify-content: center; }
+  .hero-media { max-width: 560px; margin-inline: auto; width: 100%; }
+
+  .stats { grid-template-columns: repeat(2, 1fr); }
+
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .steps.cols-4 { grid-template-columns: repeat(2, 1fr); }
+
+  .split { grid-template-columns: 1fr; gap: 2.5rem; }
+  .split.reverse .split__media { order: 0; }
+  .split__media { max-width: 560px; margin-inline: auto; }
+  .split__media.offset img:last-child { width: 40%; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 180px; }
+
+  /* Auth: stack the card and turn the brand panel into a top banner */
+  .auth { grid-template-columns: 1fr; max-width: 560px; }
+  .auth__aside { flex-direction: row; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.25rem 1.5rem; }
+  .auth__brand { flex: 0 0 auto; }
+  .auth__aside-body { margin: 0; flex: 1 1 auto; min-width: 0; }
+  .auth__aside-body h2 { display: none; }
+  .auth__aside-body > p { margin: 0; font-size: 0.85rem; }
+  .auth__aside .checklist, .auth__aside-foot { display: none; }
+}
+
+/* ---------------------------------------------------------
+   Mobile: below 768px
+   --------------------------------------------------------- */
+@media (max-width: 767px) {
+  .section { padding: clamp(2.75rem, 9vw, 4rem) 0; }
+
+  .announce { font-size: 0.78rem; }
+  .announce .container { justify-content: flex-start; padding-inline: 0.25rem; }
+  .announce .desktop-only { display: none; }
+
+  .container, .container-wide { width: min(100% - 2rem, var(--container)); }
+
+  .hero { padding-top: 1.75rem; }
+  .hero-float { padding: 0.6rem 0.8rem; font-size: 0.78rem; }
+  .hero-float .ico { width: 34px; height: 34px; }
+  .hero-float.pos-a { top: 6%; left: 0.5rem; }
+  .hero-float.pos-b { bottom: 8%; right: 0.5rem; }
+
+  .slider__caption { font-size: 0.85rem; left: 0.7rem; right: 0.7rem; bottom: 0.7rem; }
+  .slider__dots { top: 0.7rem; right: 0.7rem; }
+
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 0.85rem; }
+  .stat { padding: 1.2rem 0.9rem; }
+
+  .grid-2, .grid-3, .grid-4, .grid-auto { grid-template-columns: 1fr; }
+  .steps.cols-3, .steps.cols-4 { grid-template-columns: 1fr; }
+
+  .split__media.offset img:last-child { display: none; }
+
+  .form-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; gap: 0.7rem; }
+
+  .lightbox__prev { left: 0.5rem; }
+  .lightbox__next { right: 0.5rem; }
+  .lightbox__btn { width: 44px; height: 44px; }
+  .lightbox__close { top: 0.6rem; right: 0.6rem; }
+
+  .testi-nav { gap: 0.6rem; }
+  .cta-band { padding: 2.25rem 1.5rem; }
+
+  /* Login and register: keep the brand logo visible */
+  .auth {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 560px;
+    margin-inline: auto;
+    border-radius: 22px;
+  }
+  .auth__aside {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 1.25rem 1.5rem;
+    min-height: auto;
+    border-radius: 0;
+  }
+  .auth__brand {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+  }
+  .auth__brand .logo-img {
+    display: block;
+    width: auto;
+    max-width: 150px;
+    height: 40px;
+    object-fit: contain;
+  }
+  .auth__aside-body,
+  .auth__aside-foot {
+    display: none;
+  }
+  .auth__panel {
+    width: 100%;
+    min-width: 0;
+    padding: 1.5rem;
+  }
+  .auth__head {
+    margin-bottom: 1.25rem;
+  }
+  .auth__head h1 {
+    font-size: 1.7rem;
+  }
+  .role-toggle {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+  }
+  .role-option {
+    min-width: 0;
+  }
+  .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .auth-socials {
+    grid-template-columns: 1fr;
+  }
+  .auth-row {
+    justify-content: space-between;
+    gap: 0.65rem;
+  }
+}
+
+/* ---------------------------------------------------------
+   Small mobile: below 481px  (320px - 480px)
+   --------------------------------------------------------- */
+@media (max-width: 480px) {
+  body { font-size: 0.95rem; }
+
+  .container, .container-wide { width: min(100% - 1.5rem, var(--container)); }
+
+  .logo { font-size: 1.2rem; }
+  .logo-img { height: 38px; }
+  .logo-mark { width: 38px; height: 38px; border-radius: 12px; }
+  .logo-mark .b1 { top: 8px; left: 10px; }
+  .logo-mark .b2 { top: 8px; right: 10px; }
+  .logo-mark .b3 { bottom: 9px; left: 12px; }
+
+  .hamburger { width: 42px; height: 42px; }
+  .hamburger span { left: 11px; width: 20px; }
+  .hamburger span:nth-child(1) { top: 13px; }
+  .hamburger span:nth-child(2) { top: 19.5px; }
+  .hamburger span:nth-child(3) { top: 26px; }
+
+  .btn { padding: 0.85rem 1.35rem; font-size: 0.95rem; }
+  .btn-group { gap: 0.7rem; }
+  .btn-group .btn { flex: 1 1 100%; }
+
+  .section-head { margin-bottom: 1.75rem; }
+
+  .stats { grid-template-columns: 1fr 1fr; }
+  .stat__label { font-size: 0.78rem; }
+
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 130px; }
+
+  .testi-card { padding: 1.4rem; }
+  .hero-float.pos-b { display: none; }
+
+  .back-to-top { width: 44px; height: 44px; right: 0.9rem; bottom: 0.9rem; }
+
+  .mobile-panel { width: 88vw; }
+
+  /* Auth & error pages */
+  .auth { border-radius: 18px; }
+  .auth__aside { padding: 1rem 1.25rem; }
+  .auth__brand .logo-img { height: 36px; max-width: 135px; }
+  .auth__panel { padding: 1.25rem; }
+  .role-toggle { grid-template-columns: 1fr; }
+  .auth__head h1 { font-size: 1.5rem; }
+  .auth .btn-block { width: 100%; white-space: normal; }
+  .error-page .btn-group .btn { flex: 1 1 100%; }
+  .error-links .chip-row { gap: 0.5rem; }
+}
+
+/* ---------------------------------------------------------
+   Very small devices (below 360px) - extra safety
+   --------------------------------------------------------- */
+@media (max-width: 359px) {
+  .stats { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .nav-cta .btn-sm { display: none; }
+}
+
+/* ---------------------------------------------------------
+   Landscape phones & short screens
+   --------------------------------------------------------- */
+@media (max-height: 500px) and (orientation: landscape) {
+  .mobile-panel { padding-top: 1rem; }
+  .hero { padding-top: 1rem; }
+}
+
+/* ---------------------------------------------------------
+   Large desktop: 1400px+
+   --------------------------------------------------------- */
+@media (min-width: 1400px) {
+  :root { --container-wide: 1360px; }
+}
+
+/* ---------------------------------------------------------
+   Print
+   --------------------------------------------------------- */
+@media print {
+  .site-header, .announce, .back-to-top, .scroll-progress,
+  .mobile-panel, .nav-scrim, .site-footer, .cta-band { display: none !important; }
+  body { color: #000; }
+  a { text-decoration: underline; }
+}

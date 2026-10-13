@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stackly Preschool parent portal — upcoming events, RSVPs and past highlights." />
+  <meta name="theme-color" content="#4cc3f0" />
+  <title>Events | Parent Portal | Stackly Preschool</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body data-page="client-events">
+
+  <a class="skip-link" href="#dashMain">Skip to content</a>
+
+  <div class="dash">
+    <div data-dash-side></div>
+
+    <div class="dash-body">
+      <div data-dash-top data-title="Events" data-subtitle="4 upcoming · 2 RSVPs sent" data-search="Search events…"></div>
+
+      <main class="dash-main" id="dashMain">
+
+        <section class="dash-stats" aria-label="Event summary">
+          <article class="dash-stat" data-reveal="up">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-sky">&#128197;</span><span class="dash-stat__delta">Coming up</span></div>
+            <span class="dash-stat__num">4</span>
+            <span class="dash-stat__label">Upcoming events</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="70">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-mint">&#9989;</span><span class="dash-stat__delta">Confirmed</span></div>
+            <span class="dash-stat__num">2</span>
+            <span class="dash-stat__label">RSVPs sent</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="140">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-warm">&#128221;</span><span class="dash-stat__delta">Action needed</span></div>
+            <span class="dash-stat__num">1</span>
+            <span class="dash-stat__label">Consent pending</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="210">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-yellow">&#127881;</span><span class="dash-stat__delta">This year</span></div>
+            <span class="dash-stat__num">9</span>
+            <span class="dash-stat__label">Events attended</span>
+          </article>
+        </section>
+
+        <section class="panel" data-reveal="up">
+          <div class="panel__head">
+            <h2>Upcoming events</h2>
+            <a class="link" href="events.html">All events</a>
+          </div>
+          <div class="panel__body">
+            <div class="dash-list">
+              <div class="dash-item">
+                <span class="dash-item__ico ico-warm">&#127882;</span>
+                <div class="dash-item__body"><h4>Annual Day</h4><p>School auditorium · All families welcome</p><time>Nov 20 · 5:00 PM</time></div>
+                <span class="pill ok">RSVP sent</span>
+              </div>
+              <div class="dash-item">
+                <span class="dash-item__ico ico-sky">&#128172;</span>
+                <div class="dash-item__body"><h4>Parent–Teacher Meeting</h4><p>Blue Room · Slot 4:30 PM</p><time>Nov 26 · 4:00 PM</time></div>
+                <span class="pill ok">RSVP sent</span>
+              </div>
+              <div class="dash-item">
+                <span class="dash-item__ico ico-mint">&#127939;</span>
+                <div class="dash-item__body"><h4>Sports Day</h4><p>Main playground · Bring water bottles</p><time>Dec 05 · 9:00 AM</time></div>
+                <a class="link" href="#">RSVP</a>
+              </div>
+              <div class="dash-item">
+                <span class="dash-item__ico ico-yellow">&#128218;</span>
+                <div class="dash-item__body"><h4>Story Day</h4><p>Library corner · Costume optional</p><time>Dec 12 · 10:00 AM</time></div>
+                <a class="link" href="#">RSVP</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" data-reveal="up">
+          <div class="panel__head">
+            <h2>Past highlights</h2>
+          </div>
+          <div class="panel__body">
+            <div class="dash-gallery">
+              <a href="events.html"><img src="images/events/annual-day.webp" alt="Annual Day" loading="lazy" /></a>
+              <a href="events.html"><img src="images/events/sports-day.webp" alt="Sports Day" loading="lazy" /></a>
+              <a href="events.html"><img src="images/events/science-fair.webp" alt="Science fair" loading="lazy" /></a>
+              <a href="events.html"><img src="images/events/festival.webp" alt="Festival" loading="lazy" /></a>
+              <a href="events.html"><img src="images/events/parent-meeting.webp" alt="Parent meeting" loading="lazy" /></a>
+              <a href="events.html"><img src="images/events/story-day.webp" alt="Story day" loading="lazy" /></a>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="dash-scrim" id="dashScrim" hidden></div>
+
+  <script src="js/dash-menu.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</body>
+</html>

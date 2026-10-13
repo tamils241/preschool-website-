@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Login to the Stackly Preschool parent portal to view attendance, daily reports, photos and notices." />
+  <meta name="theme-color" content="#4cc3f0" />
+  <title>Login | Stackly Preschool</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body data-page="login">
+
+  <main id="main">
+    <section class="section auth-section">
+      <div class="container">
+        <div class="auth" data-reveal="up">
+          <aside class="auth__aside">
+            <span class="auth__blob a" aria-hidden="true"></span>
+            <span class="auth__blob b" aria-hidden="true"></span>
+            <a class="auth__brand" href="index.html" aria-label="Stackly Preschool home">
+              <img src="images/logo/logo.webp" alt="Stackly Preschool" class="logo-img" width="151" height="44" />
+            </a>
+            <div class="auth__aside-body">
+              <h2>Welcome back!</h2>
+              <p>Sign in to see attendance, daily reports, photos and important notices — all in one place.</p>
+              <ul class="checklist">
+                <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span> Daily activity photos</li>
+                <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span> Attendance &amp; progress updates</li>
+                <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span> Fee &amp; event reminders</li>
+              </ul>
+            </div>
+            <p class="auth__aside-foot">New to Stackly? <a href="register.html">Create an account</a></p>
+          </aside>
+
+          <div class="auth__panel">
+            <div class="auth__head">
+              <span class="eyebrow sky">Parent Portal</span>
+              <h1>Login</h1>
+              <p>Enter your details to access your child's updates.</p>
+            </div>
+
+            <form data-form="login" novalidate>
+              <div class="form-status" data-status aria-live="polite"></div>
+              <fieldset class="role-select" style="margin-bottom:1.1rem">
+                <legend>I am signing in as <span class="req">*</span></legend>
+                <div class="role-toggle">
+                  <input type="radio" id="loginRoleClient" name="role" value="client" class="role-radio" checked />
+                  <label class="role-option" for="loginRoleClient">
+                    <span class="role-option__ico" aria-hidden="true">&#128106;</span>
+                    <span class="role-option__txt"><strong>Client</strong><small>Parent / Guardian</small></span>
+                  </label>
+                  <input type="radio" id="loginRoleAdmin" name="role" value="admin" class="role-radio" />
+                  <label class="role-option" for="loginRoleAdmin">
+                    <span class="role-option__ico" aria-hidden="true">&#128737;</span>
+                    <span class="role-option__txt"><strong>Admin</strong><small>Staff / Management</small></span>
+                  </label>
+                </div>
+              </fieldset>
+              <div class="form-grid">
+                <div class="field full">
+                  <label for="loginEmail">Email address <span class="req">*</span></label>
+                  <input type="email" id="loginEmail" name="email" required autocomplete="email" placeholder="you@example.com" />
+                  <span class="error" data-error></span>
+                </div>
+                <div class="field full">
+                  <label for="loginPass">Password <span class="req">*</span></label>
+                  <div class="pass-wrap">
+                    <input type="password" id="loginPass" name="password" required autocomplete="current-password" placeholder="Your password" />
+                    <button type="button" class="pass-toggle" data-toggle-password aria-controls="loginPass" aria-pressed="false" aria-label="Show password"></button>
+                  </div>
+                  <span class="error" data-error></span>
+                </div>
+              </div>
+
+              <div class="auth-row" style="margin-top:1.1rem">
+                <label style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.88rem;color:var(--ink-soft)">
+                  <input type="checkbox" name="remember" style="width:18px;height:18px;accent-color:var(--sky-600)" /> Remember me
+                </label>
+                <a href="#">Forgot password?</a>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg btn-block" style="margin-top:1.3rem">Login</button>
+
+              <div class="auth-or">or</div>
+              <div class="auth-socials">
+                <button type="button" class="auth-social">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.7v3h3.9c2.3-2.1 3.5-5.2 3.5-8.9z"/><path fill="#34A853" d="M12 24c3.2 0 5.9-1.1 7.9-2.9l-3.9-3c-1.1.7-2.4 1.2-4 1.2-3.1 0-5.7-2.1-6.6-4.9H1.4v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.4 14.4a7.2 7.2 0 0 1 0-4.6V6.7H1.4a12 12 0 0 0 0 10.8l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.4 6.7l4 3.1C6.3 6.9 8.9 4.8 12 4.8z"/></svg>
+                  Google
+                </button>
+                <button type="button" class="auth-social">
+                  <svg viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.6 4.5-4.6 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-1.9.9-1.9 1.8V12h3.3l-.5 3.5h-2.8v8.4A12 12 0 0 0 24 12z"/></svg>
+                  Facebook
+                </button>
+              </div>
+
+              <p class="auth__foot">New user? <a href="register.html">Create an account</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/forms.js" defer></script>
+  <script src="js/auth.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stackly Preschool parent portal — your child's attendance record and daily check-ins." />
+  <meta name="theme-color" content="#4cc3f0" />
+  <title>Attendance | Parent Portal | Stackly Preschool</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body data-page="client-attendance">
+
+  <a class="skip-link" href="#dashMain">Skip to content</a>
+
+  <div class="dash">
+    <div data-dash-side></div>
+
+    <div class="dash-body">
+      <div data-dash-top data-title="Attendance" data-subtitle="October · 96% this month" data-search="Search date…"></div>
+
+      <main class="dash-main" id="dashMain">
+
+        <section class="dash-stats" aria-label="Attendance summary">
+          <article class="dash-stat" data-reveal="up">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-mint">&#9989;</span><span class="dash-stat__delta">+2%</span></div>
+            <span class="dash-stat__num">96%</span>
+            <span class="dash-stat__label">This month</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="70">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-sky">&#128197;</span><span class="dash-stat__delta">of 22 days</span></div>
+            <span class="dash-stat__num">21</span>
+            <span class="dash-stat__label">Days present</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="140">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-warm">&#128683;</span><span class="dash-stat__delta">Excused</span></div>
+            <span class="dash-stat__num">1</span>
+            <span class="dash-stat__label">Absence</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="210">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-yellow">&#128336;</span><span class="dash-stat__delta">On time</span></div>
+            <span class="dash-stat__num">20</span>
+            <span class="dash-stat__label">Punctual days</span>
+          </article>
+        </section>
+
+        <div class="dash-grid split-2">
+          <section class="panel" data-reveal="up">
+            <div class="panel__head">
+              <h2>Weekly attendance</h2>
+              <span class="pill info">Last 5 weeks</span>
+            </div>
+            <div class="panel__body">
+              <div class="bar-row">
+                <div class="bar-row__top"><strong>Week 1</strong><span>100%</span></div>
+                <div class="bar mint"><span style="width:100%"></span></div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-row__top"><strong>Week 2</strong><span>90%</span></div>
+                <div class="bar warm"><span style="width:90%"></span></div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-row__top"><strong>Week 3</strong><span>100%</span></div>
+                <div class="bar mint"><span style="width:100%"></span></div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-row__top"><strong>Week 4</strong><span>95%</span></div>
+                <div class="bar"><span style="width:95%"></span></div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-row__top"><strong>Week 5</strong><span>100%</span></div>
+                <div class="bar yellow"><span style="width:100%"></span></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" data-reveal="up" data-reveal-delay="80">
+            <div class="panel__head">
+              <h2>Recent activity</h2>
+            </div>
+            <div class="panel__body">
+              <div class="dash-list">
+                <div class="dash-item">
+                  <span class="dash-item__ico ico-mint">&#9989;</span>
+                  <div class="dash-item__body"><h4>Present</h4><p>Full day · 8:02 AM – 1:00 PM</p><time>Today</time></div>
+                </div>
+                <div class="dash-item">
+                  <span class="dash-item__ico ico-mint">&#9989;</span>
+                  <div class="dash-item__body"><h4>Present</h4><p>Full day · 8:10 AM – 1:00 PM</p><time>Yesterday</time></div>
+                </div>
+                <div class="dash-item">
+                  <span class="dash-item__ico ico-warm">&#128683;</span>
+                  <div class="dash-item__body"><h4>Absent — excused</h4><p>Fever · note from parent</p><time>Mon</time></div>
+                </div>
+                <div class="dash-item">
+                  <span class="dash-item__ico ico-mint">&#9989;</span>
+                  <div class="dash-item__body"><h4>Present</h4><p>Full day · 8:05 AM – 1:00 PM</p><time>Fri</time></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel" data-reveal="up">
+          <div class="panel__head">
+            <h2>Daily log</h2>
+            <a class="btn btn-outline btn-sm" href="#">Download record</a>
+          </div>
+          <div class="panel__body">
+            <div class="table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr><th>Date</th><th>Check-in</th><th>Check-out</th><th>Duration</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Oct 14, 2026</td><td>8:02 AM</td><td>1:00 PM</td><td>4h 58m</td><td><span class="pill ok">Present</span></td></tr>
+                  <tr><td>Oct 13, 2026</td><td>8:10 AM</td><td>1:00 PM</td><td>4h 50m</td><td><span class="pill ok">Present</span></td></tr>
+                  <tr><td>Oct 12, 2026</td><td>—</td><td>—</td><td>—</td><td><span class="pill warn">Absent</span></td></tr>
+                  <tr><td>Oct 11, 2026</td><td>8:05 AM</td><td>1:00 PM</td><td>4h 55m</td><td><span class="pill ok">Present</span></td></tr>
+                  <tr><td>Oct 10, 2026</td><td>8:35 AM</td><td>1:00 PM</td><td>4h 25m</td><td><span class="pill info">Late</span></td></tr>
+                  <tr><td>Oct 09, 2026</td><td>8:00 AM</td><td>1:00 PM</td><td>5h 00m</td><td><span class="pill ok">Present</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="dash-scrim" id="dashScrim" hidden></div>
+
+  <script src="js/dash-menu.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</body>
+</html>

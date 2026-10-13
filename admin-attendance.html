@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stackly Preschool — daily attendance tracking by class and student." />
+  <meta name="theme-color" content="#4cc3f0" />
+  <title>Attendance | Admin | Stackly Preschool</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body data-page="admin-attendance">
+
+  <a class="skip-link" href="#dashMain">Skip to content</a>
+
+  <div class="dash">
+    <div data-dash-side></div>
+
+    <div class="dash-body">
+      <div data-dash-top data-title="Attendance" data-subtitle="Today · 96% present" data-search="Search class or student…"></div>
+
+      <main class="dash-main" id="dashMain">
+
+        <section class="dash-stats" aria-label="Attendance summary">
+          <article class="dash-stat" data-reveal="up">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-mint">&#9989;</span><span class="dash-stat__delta">+1%</span></div>
+            <span class="dash-stat__num">238</span>
+            <span class="dash-stat__label">Present today</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="70">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-warm">&#128683;</span><span class="dash-stat__delta">4 classes</span></div>
+            <span class="dash-stat__num">6</span>
+            <span class="dash-stat__label">Absent</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="140">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-sky">&#128336;</span><span class="dash-stat__delta">Reported</span></div>
+            <span class="dash-stat__num">4</span>
+            <span class="dash-stat__label">Late arrivals</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="210">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-yellow">&#128197;</span><span class="dash-stat__delta">This week</span></div>
+            <span class="dash-stat__num">96%</span>
+            <span class="dash-stat__label">Weekly average</span>
+          </article>
+        </section>
+
+        <div class="dash-grid split-2">
+          <section class="panel" data-reveal="up">
+            <div class="panel__head">
+              <h2>Attendance by class</h2>
+              <span class="pill info">Today</span>
+            </div>
+            <div class="panel__body">
+              <div class="bar-row">
+                <div class="bar-row__top"><strong>Nursery A</strong><span>96%</span></div>
+                <div class="bar mint"><span style="width:96%"></span></div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-row__top"><strong>Playgroup B</strong><span>92%</span></div>
+                <div class="bar"><span style="width:92%"></span></div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-row__top"><strong>Lower Kindergarten</strong><span>89%</span></div>
+                <div class="bar warm"><span style="width:89%"></span></div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-row__top"><strong>Upper Kindergarten</strong><span>94%</span></div>
+                <div class="bar yellow"><span style="width:94%"></span></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" data-reveal="up" data-reveal-delay="80">
+            <div class="panel__head">
+              <h2>Absent today</h2>
+              <span class="pill warn">6 students</span>
+            </div>
+            <div class="panel__body">
+              <div class="dash-list">
+                <div class="dash-item">
+                  <span class="u__av warm">LP</span>
+                  <div class="dash-item__body"><h4>Liam Patel</h4><p>Playgroup B · Sick leave</p></div>
+                </div>
+                <div class="dash-item">
+                  <span class="u__av">AG</span>
+                  <div class="dash-item__body"><h4>Ava Garcia</h4><p>LKG A · Family trip</p></div>
+                </div>
+                <div class="dash-item">
+                  <span class="u__av mint">MN</span>
+                  <div class="dash-item__body"><h4>Mason Nguyen</h4><p>Playgroup A · No notice</p></div>
+                </div>
+                <div class="dash-item">
+                  <span class="u__av">BW</span>
+                  <div class="dash-item__body"><h4>Ben Wilson</h4><p>Nursery B · Sick leave</p></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel" data-reveal="up">
+          <div class="panel__head">
+            <h2>Daily register</h2>
+            <a class="btn btn-outline btn-sm" href="#">Export register</a>
+          </div>
+          <div class="panel__body">
+            <div class="table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr><th>Student</th><th>Class</th><th>Check-in</th><th>Check-out</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="u"><span class="u__av">EJ</span><strong>Emma Johnson</strong></span></td><td>Nursery A</td><td>8:02 AM</td><td>—</td><td><span class="pill ok">Present</span></td></tr>
+                  <tr><td><span class="u"><span class="u__av mint">NK</span><strong>Noah Kim</strong></span></td><td>Toddler 1</td><td>8:10 AM</td><td>—</td><td><span class="pill ok">Present</span></td></tr>
+                  <tr><td><span class="u"><span class="u__av warm">OB</span><strong>Oliver Brown</strong></span></td><td>UKG A</td><td>8:35 AM</td><td>—</td><td><span class="pill warn">Late</span></td></tr>
+                  <tr><td><span class="u"><span class="u__av">IC</span><strong>Isla Chen</strong></span></td><td>LKG B</td><td>8:05 AM</td><td>—</td><td><span class="pill ok">Present</span></td></tr>
+                  <tr><td><span class="u"><span class="u__av mint">SD</span><strong>Sofia Diaz</strong></span></td><td>Nursery B</td><td>8:00 AM</td><td>—</td><td><span class="pill ok">Present</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="dash-scrim" id="dashScrim" hidden></div>
+
+  <script src="js/dash-menu.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</body>
+</html>

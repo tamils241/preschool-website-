@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stackly Preschool parent portal — manage your profile, children and notification preferences." />
+  <meta name="theme-color" content="#4cc3f0" />
+  <title>Settings | Parent Portal | Stackly Preschool</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body data-page="client-settings">
+
+  <a class="skip-link" href="#dashMain">Skip to content</a>
+
+  <div class="dash">
+    <div data-dash-side></div>
+
+    <div class="dash-body">
+      <div data-dash-top data-title="Settings" data-subtitle="Profile &amp; preferences" data-search="Search settings…"></div>
+
+      <main class="dash-main" id="dashMain">
+
+        <div class="dash-grid split-2">
+          <section class="panel" data-reveal="up">
+            <div class="panel__head">
+              <h2>My profile</h2>
+            </div>
+            <div class="panel__body">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="pName">Full name</label>
+                  <input type="text" id="pName" value="Sara Johnson" />
+                </div>
+                <div class="field">
+                  <label for="pEmail">Email</label>
+                  <input type="email" id="pEmail" value="sara.johnson@email.com" />
+                </div>
+                <div class="field">
+                  <label for="pPhone">Phone</label>
+                  <input type="tel" id="pPhone" value="+1 202 555 0134" />
+                </div>
+                <div class="field">
+                  <label for="pRelation">Relationship to child</label>
+                  <input type="text" id="pRelation" value="Mother" />
+                </div>
+                <div class="field full">
+                  <label for="pAddress">Home address</label>
+                  <input type="text" id="pAddress" value="18 Willow Lane, Springfield" />
+                </div>
+              </div>
+              <div style="padding-top:1rem">
+                <button class="btn btn-primary btn-sm" type="button">Save changes</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" data-reveal="up" data-reveal-delay="80">
+            <div class="panel__head">
+              <h2>Notifications</h2>
+            </div>
+            <div class="panel__body">
+              <div class="dash-switch">
+                <div class="dash-switch__txt"><strong>Daily updates</strong><small>Photos and activities from your child's day</small></div>
+                <label class="switch"><input type="checkbox" checked /><span></span></label>
+              </div>
+              <div class="dash-switch">
+                <div class="dash-switch__txt"><strong>Teacher messages</strong><small>Notify me of new messages</small></div>
+                <label class="switch"><input type="checkbox" checked /><span></span></label>
+              </div>
+              <div class="dash-switch">
+                <div class="dash-switch__txt"><strong>Event reminders</strong><small>Alerts for upcoming events</small></div>
+                <label class="switch"><input type="checkbox" checked /><span></span></label>
+              </div>
+              <div class="dash-switch">
+                <div class="dash-switch__txt"><strong>Fee reminders</strong><small>Notify before invoices are due</small></div>
+                <label class="switch"><input type="checkbox" checked /><span></span></label>
+              </div>
+              <div class="dash-switch">
+                <div class="dash-switch__txt"><strong>Newsletter</strong><small>Monthly school newsletter</small></div>
+                <label class="switch"><input type="checkbox" /><span></span></label>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel" data-reveal="up">
+          <div class="panel__head">
+            <h2>My children</h2>
+            <a class="link" href="#">Add child</a>
+          </div>
+          <div class="panel__body">
+            <div class="table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr><th>Name</th><th>Program</th><th>Class</th><th>Student ID</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="u"><span class="u__av">EJ</span><strong>Emma Johnson</strong></span></td><td>Nursery</td><td>Nursery A</td><td>STK-2024-0318</td><td><span class="pill ok">Active</span></td></tr>
+                  <tr><td><span class="u"><span class="u__av mint">NJ</span><strong>Noah Johnson</strong></span></td><td>Toddler</td><td>Toddler 1</td><td>STK-2025-0142</td><td><span class="pill ok">Active</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="dash-scrim" id="dashScrim" hidden></div>
+
+  <script src="js/dash-menu.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</body>
+</html>

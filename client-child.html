@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stackly Preschool parent portal — your child's profile, class, health and emergency contacts." />
+  <meta name="theme-color" content="#4cc3f0" />
+  <title>My Child | Parent Portal | Stackly Preschool</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body data-page="client-child">
+
+  <a class="skip-link" href="#dashMain">Skip to content</a>
+
+  <div class="dash">
+    <div data-dash-side></div>
+
+    <div class="dash-body">
+      <div data-dash-top data-title="My Child" data-subtitle="Profile &amp; class details" data-search="Search…"></div>
+
+      <main class="dash-main" id="dashMain">
+
+        <section class="dash-hero warm" data-reveal="up">
+          <span class="dash-hero__blob a" aria-hidden="true"></span>
+          <span class="dash-hero__blob b" aria-hidden="true"></span>
+          <div class="dash-hero__copy">
+            <h2>About <span data-child-name>Emma</span></h2>
+            <p>Nursery A · Blue Room · Enrolled since Aug 2024</p>
+          </div>
+          <div class="dash-hero__actions">
+            <div class="child-switch">
+              <button type="button" class="child-chip is-active" data-child="Emma"><span class="child-chip__av">E</span> Emma</button>
+              <button type="button" class="child-chip" data-child="Noah"><span class="child-chip__av" style="background:var(--grad-mint)">N</span> Noah</button>
+            </div>
+          </div>
+        </section>
+
+        <div class="dash-grid split-2">
+          <section class="panel" data-reveal="up">
+            <div class="panel__head">
+              <h2>Child details</h2>
+              <a class="link" href="#">Edit</a>
+            </div>
+            <div class="panel__body">
+              <div class="form-grid">
+                <div class="field">
+                  <label>Full name</label>
+                  <input type="text" value="Emma Johnson" readonly />
+                </div>
+                <div class="field">
+                  <label>Date of birth</label>
+                  <input type="text" value="12 March 2021" readonly />
+                </div>
+                <div class="field">
+                  <label>Program</label>
+                  <input type="text" value="Nursery" readonly />
+                </div>
+                <div class="field">
+                  <label>Class &amp; room</label>
+                  <input type="text" value="Nursery A · Blue Room" readonly />
+                </div>
+                <div class="field">
+                  <label>Class teacher</label>
+                  <input type="text" value="Ms. Rivera" readonly />
+                </div>
+                <div class="field">
+                  <label>Student ID</label>
+                  <input type="text" value="STK-2024-0318" readonly />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" data-reveal="up" data-reveal-delay="80">
+            <div class="panel__head">
+              <h2>Health &amp; allergies</h2>
+              <span class="pill warn">1 note</span>
+            </div>
+            <div class="panel__body">
+              <div class="dash-list">
+                <div class="dash-item">
+                  <span class="dash-item__ico ico-warm">&#129658;</span>
+                  <div class="dash-item__body"><h4>Peanut allergy</h4><p>Mild — avoid peanuts and tree nuts</p></div>
+                </div>
+                <div class="dash-item">
+                  <span class="dash-item__ico ico-mint">&#128138;</span>
+                  <div class="dash-item__body"><h4>Vaccinations up to date</h4><p>Last updated Aug 2026</p></div>
+                </div>
+                <div class="dash-item">
+                  <span class="dash-item__ico ico-sky">&#128153;</span>
+                  <div class="dash-item__body"><h4>Blood group</h4><p>O positive</p></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel" data-reveal="up">
+          <div class="panel__head">
+            <h2>Emergency contacts</h2>
+            <a class="link" href="#">Add contact</a>
+          </div>
+          <div class="panel__body">
+            <div class="table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr><th>Name</th><th>Relationship</th><th>Phone</th><th>Primary</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><span class="u"><span class="u__av">SJ</span><strong>Sara Johnson</strong></span></td><td>Mother</td><td>+1 202 555 0134</td><td><span class="pill ok">Yes</span></td></tr>
+                  <tr><td><span class="u"><span class="u__av warm">MJ</span><strong>Michael Johnson</strong></span></td><td>Father</td><td>+1 202 555 0135</td><td><span class="pill info">No</span></td></tr>
+                  <tr><td><span class="u"><span class="u__av mint">GJ</span><strong>Grace Johnson</strong></span></td><td>Grandmother</td><td>+1 202 555 0178</td><td><span class="pill info">No</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="dash-scrim" id="dashScrim" hidden></div>
+
+  <script src="js/dash-menu.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</body>
+</html>

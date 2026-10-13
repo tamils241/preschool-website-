@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse the Stackly Preschool photo gallery — classrooms, activities, events and outdoor play. Filter by category and view images in a full lightbox." />
+  <meta name="theme-color" content="#4cc3f0" />
+  <title>Gallery | Stackly Preschool</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body data-page="gallery">
+
+  <div data-component="header"></div>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow pink" data-reveal="up">Photo Gallery</span>
+        <h1 data-reveal="up">Little moments, big smiles</h1>
+        <p class="lead" data-reveal="up">A window into everyday life at Stackly. Click any photo to view it full size.</p>
+        <nav class="breadcrumb" aria-label="Breadcrumb" data-reveal="up">
+          <a href="index.html">Home</a><span class="sep">/</span><span aria-current="page">Gallery</span>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- Filters -->
+        <div class="filters" data-filter-group="gallery" role="group" aria-label="Filter gallery by category" data-reveal="up">
+          <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All Photos</button>
+          <button type="button" class="filter-btn" data-filter="classrooms" aria-pressed="false">Classrooms</button>
+          <button type="button" class="filter-btn" data-filter="activities" aria-pressed="false">Activities</button>
+          <button type="button" class="filter-btn" data-filter="events" aria-pressed="false">Events</button>
+          <button type="button" class="filter-btn" data-filter="outdoor" aria-pressed="false">Outdoor Play</button>
+        </div>
+
+        <p class="sr-only" data-filter-live="gallery" aria-live="polite"></p>
+
+        <!-- Gallery grid -->
+        <div class="gallery-grid" data-filter-items="gallery">
+
+          <figure class="gallery-item filter-item reveal-in" data-category="classrooms" data-lightbox tabindex="0" role="button" aria-label="Open image: Bright classroom learning" data-reveal="up">
+            <img src="images/classrooms/classroom-1.webp" data-full="images/classrooms/classroom-1.webp" data-caption="A bright, welcoming classroom" alt="A bright and welcoming Stackly classroom with learning materials" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="activities" data-lightbox tabindex="0" role="button" aria-label="Open image: Art day" data-reveal="up">
+            <img src="images/gallery/gallery-1.webp" data-full="images/gallery/gallery-1.webp" data-caption="Painting fun on art day" alt="Children painting during art day" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="outdoor" data-lightbox tabindex="0" role="button" aria-label="Open image: Playground fun" data-reveal="up">
+            <img src="images/gallery/gallery-2.webp" data-full="images/gallery/gallery-2.webp" data-caption="Outdoor playground fun" alt="Children playing on the outdoor playground" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="classrooms activities" data-lightbox tabindex="0" role="button" aria-label="Open image: Story time" data-reveal="up">
+            <img src="images/gallery/gallery-3.webp" data-full="images/gallery/gallery-3.webp" data-caption="Cosy story time" alt="Children listening to a story in the reading corner" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="activities" data-lightbox tabindex="0" role="button" aria-label="Open image: Music class" data-reveal="up">
+            <img src="images/gallery/gallery-4.webp" data-full="images/gallery/gallery-4.webp" data-caption="Music and movement class" alt="Children singing during a music class" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="events" data-lightbox tabindex="0" role="button" aria-label="Open image: Annual day" data-reveal="up">
+            <img src="images/gallery/gallery-5.webp" data-full="images/gallery/gallery-5.webp" data-caption="Shining on annual day" alt="Children performing on stage at annual day" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="outdoor" data-lightbox tabindex="0" role="button" aria-label="Open image: Nature walk" data-reveal="up">
+            <img src="images/gallery/gallery-6.webp" data-full="images/gallery/gallery-6.webp" data-caption="Exploring on a nature walk" alt="Children exploring outdoors on a nature walk" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="activities" data-lightbox tabindex="0" role="button" aria-label="Open image: Puzzle time" data-reveal="up">
+            <img src="images/gallery/gallery-7.webp" data-full="images/gallery/gallery-7.webp" data-caption="Puzzle solving time" alt="Children solving puzzles together" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="classrooms" data-lightbox tabindex="0" role="button" aria-label="Open image: Snack time" data-reveal="up">
+            <img src="images/gallery/gallery-8.webp" data-full="images/gallery/gallery-8.webp" data-caption="Healthy snack time" alt="Children enjoying a healthy snack" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="activities classrooms" data-lightbox tabindex="0" role="button" aria-label="Open image: Craft corner" data-reveal="up">
+            <img src="images/gallery/gallery-9.webp" data-full="images/gallery/gallery-9.webp" data-caption="Creative craft corner" alt="Children making crafts in the craft corner" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="events outdoor" data-lightbox tabindex="0" role="button" aria-label="Open image: Field trip" data-reveal="up">
+            <img src="images/gallery/gallery-10.webp" data-full="images/gallery/gallery-10.webp" data-caption="A fun school field trip" alt="Children boarding a bus for a field trip" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="events outdoor" data-lightbox tabindex="0" role="button" aria-label="Open image: Sports day" data-reveal="up">
+            <img src="images/gallery/gallery-11.webp" data-full="images/gallery/gallery-11.webp" data-caption="Racing on sports day" alt="Children running races on sports day" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="events classrooms" data-lightbox tabindex="0" role="button" aria-label="Open image: Graduation day" data-reveal="up">
+            <img src="images/gallery/gallery-12.webp" data-full="images/gallery/gallery-12.webp" data-caption="Graduation day pride" alt="Children celebrating graduation day" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="classrooms activities" data-lightbox tabindex="0" role="button" aria-label="Open image: Reading corner" data-reveal="up">
+            <img src="images/facilities/reading-corner.webp" data-full="images/facilities/reading-corner.webp" data-caption="Cosy reading corner" alt="A cosy reading corner filled with picture books" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="activities" data-lightbox tabindex="0" role="button" aria-label="Open image: Indoor play zone" data-reveal="up">
+            <img src="images/facilities/indoor-play.webp" data-full="images/facilities/indoor-play.webp" data-caption="Indoor play zone" alt="Children playing in the indoor play zone" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="outdoor" data-lightbox tabindex="0" role="button" aria-label="Open image: Outdoor playground" data-reveal="up">
+            <img src="images/facilities/outdoor-playground.webp" data-full="images/facilities/outdoor-playground.webp" data-caption="Outdoor playground" alt="Children on the outdoor playground equipment" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="activities classrooms" data-lightbox tabindex="0" role="button" aria-label="Open image: Story time circle" data-reveal="up">
+            <img src="images/activities/story.webp" data-full="images/activities/story.webp" data-caption="Story time circle" alt="Children gathered for a story time circle" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="activities" data-lightbox tabindex="0" role="button" aria-label="Open image: Music and rhythm" data-reveal="up">
+            <img src="images/activities/music.webp" data-full="images/activities/music.webp" data-caption="Music and rhythm session" alt="Children enjoying a music and rhythm session" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="outdoor activities" data-lightbox tabindex="0" role="button" aria-label="Open image: Nature discovery" data-reveal="up">
+            <img src="images/activities/nature.webp" data-full="images/activities/nature.webp" data-caption="Nature discovery walk" alt="Children exploring nature outdoors" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="activities" data-lightbox tabindex="0" role="button" aria-label="Open image: Yoga and mindfulness" data-reveal="up">
+            <img src="images/activities/yoga.webp" data-full="images/activities/yoga.webp" data-caption="Yoga and mindfulness" alt="Children practising yoga and mindfulness" width="800" height="600" loading="lazy" />
+          </figure>
+
+  
+          <figure class="gallery-item filter-item reveal-in" data-category="events" data-lightbox tabindex="0" role="button" aria-label="Open image: Annual day performance" data-reveal="up">
+            <img src="images/events/annual-day.webp" data-full="images/events/annual-day.webp" data-caption="Annual day performance" alt="Children performing on stage at the annual day" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="events outdoor" data-lightbox tabindex="0" role="button" aria-label="Open image: Sports day races" data-reveal="up">
+            <img src="images/events/sports-day.webp" data-full="images/events/sports-day.webp" data-caption="Sports day races" alt="Children taking part in sports day races" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="classrooms" data-lightbox tabindex="0" role="button" aria-label="Open image: Learning stations" data-reveal="up">
+            <img src="images/classrooms/classroom-2.webp" data-full="images/classrooms/classroom-2.webp" data-caption="Hands-on learning stations" alt="A classroom set up with hands-on learning stations" width="800" height="600" loading="lazy" />
+          </figure>
+
+          <figure class="gallery-item filter-item reveal-in" data-category="classrooms" data-lightbox tabindex="0" role="button" aria-label="Open image: Nursery playtime" data-reveal="up">
+            <img src="images/programs/nursery.webp" data-full="images/programs/nursery.webp" data-caption="Nursery playtime" alt="Nursery children at playtime" width="800" height="600" loading="lazy" />
+          </figure>
+
+        </div>
+
+        <p class="text-center" data-filter-empty="gallery" hidden style="color:var(--muted)">No photos match this filter yet.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-component="footer"></div>
+
+  <script src="js/navigation.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+</body>
+</html>

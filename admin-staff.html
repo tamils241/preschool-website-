@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stackly Preschool — manage teachers, assistants and support staff." />
+  <meta name="theme-color" content="#4cc3f0" />
+  <title>Staff | Admin | Stackly Preschool</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body data-page="admin-staff">
+
+  <a class="skip-link" href="#dashMain">Skip to content</a>
+
+  <div class="dash">
+    <div data-dash-side></div>
+
+    <div class="dash-body">
+      <div data-dash-top data-title="Staff" data-subtitle="24 team members" data-search="Search staff…"></div>
+
+      <main class="dash-main" id="dashMain">
+
+        <section class="dash-stats" aria-label="Staff summary">
+          <article class="dash-stat" data-reveal="up">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-sky">&#128105;&#8205;&#127979;</span><span class="dash-stat__delta">+2</span></div>
+            <span class="dash-stat__num">24</span>
+            <span class="dash-stat__label">Total staff</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="70">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-mint">&#127979;</span><span class="dash-stat__delta">Present</span></div>
+            <span class="dash-stat__num">22</span>
+            <span class="dash-stat__label">On duty today</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="140">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-warm">&#127891;</span><span class="dash-stat__delta">Qualified</span></div>
+            <span class="dash-stat__num">18</span>
+            <span class="dash-stat__label">Lead teachers</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="210">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-yellow">&#127873;</span><span class="dash-stat__delta">This month</span></div>
+            <span class="dash-stat__num">3</span>
+            <span class="dash-stat__label">On leave</span>
+          </article>
+        </section>
+
+        <section class="panel" data-reveal="up">
+          <div class="panel__head">
+            <h2>Staff directory</h2>
+            <a class="btn btn-primary btn-sm" href="#">+ Add staff</a>
+          </div>
+          <div class="panel__body">
+            <div class="dash-toolbar">
+              <button type="button" class="filter-btn is-active">Everyone</button>
+              <button type="button" class="filter-btn">Teachers</button>
+              <button type="button" class="filter-btn">Assistants</button>
+              <button type="button" class="filter-btn">Support</button>
+              <span class="spacer"></span>
+              <button type="button" class="btn btn-outline btn-sm">Export</button>
+            </div>
+            <div class="table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr><th>Name</th><th>Role</th><th>Class</th><th>Experience</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="u"><span class="u__av">MR</span><strong>Ms. Rivera</strong></span></td>
+                    <td>Lead Teacher</td><td>Nursery A</td><td>8 yrs</td>
+                    <td><span class="pill ok">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="u"><span class="u__av warm">AL</span><strong>Ms. Lewis</strong></span></td>
+                    <td>Lead Teacher</td><td>Playgroup B</td><td>6 yrs</td>
+                    <td><span class="pill ok">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="u"><span class="u__av mint">JD</span><strong>Mr. Davis</strong></span></td>
+                    <td>Music Teacher</td><td>All classes</td><td>10 yrs</td>
+                    <td><span class="pill ok">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="u"><span class="u__av">PH</span><strong>Ms. Hayes</strong></span></td>
+                    <td>Assistant</td><td>LKG A</td><td>3 yrs</td>
+                    <td><span class="pill ok">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="u"><span class="u__av warm">RB</span><strong>Mr. Brooks</strong></span></td>
+                    <td>PE Coach</td><td>Outdoor</td><td>5 yrs</td>
+                    <td><span class="pill warn">On leave</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="u"><span class="u__av mint">CT</span><strong>Ms. Turner</strong></span></td>
+                    <td>Assistant</td><td>UKG A</td><td>2 yrs</td>
+                    <td><span class="pill ok">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="u"><span class="u__av">NW</span><strong>Ms. Ward</strong></span></td>
+                    <td>Care Lead</td><td>Dining Hall</td><td>7 yrs</td>
+                    <td><span class="pill ok">Active</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="dash-scrim" id="dashScrim" hidden></div>
+
+  <script src="js/dash-menu.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</body>
+</html>

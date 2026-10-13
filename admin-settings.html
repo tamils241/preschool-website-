@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stackly Preschool — school profile, notifications and account settings." />
+  <meta name="theme-color" content="#4cc3f0" />
+  <title>Settings | Admin | Stackly Preschool</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body data-page="admin-settings">
+
+  <a class="skip-link" href="#dashMain">Skip to content</a>
+
+  <div class="dash">
+    <div data-dash-side></div>
+
+    <div class="dash-body">
+      <div data-dash-top data-title="Settings" data-subtitle="School profile & preferences" data-search="Search settings…"></div>
+
+      <main class="dash-main" id="dashMain">
+
+        <div class="dash-grid split-2">
+          <section class="panel" data-reveal="up">
+            <div class="panel__head">
+              <h2>School profile</h2>
+            </div>
+            <div class="panel__body">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="schoolName">School name</label>
+                  <input type="text" id="schoolName" value="Stackly Preschool" />
+                </div>
+                <div class="field">
+                  <label for="schoolEmail">Contact email</label>
+                  <input type="email" id="schoolEmail" value="hello@stackly.school" />
+                </div>
+                <div class="field">
+                  <label for="schoolPhone">Phone</label>
+                  <input type="tel" id="schoolPhone" value="+1 202 555 0100" />
+                </div>
+                <div class="field">
+                  <label for="schoolHours">Operating hours</label>
+                  <input type="text" id="schoolHours" value="Mon–Fri · 7:30 AM – 6:00 PM" />
+                </div>
+                <div class="field full">
+                  <label for="schoolAddress">Address</label>
+                  <input type="text" id="schoolAddress" value="42 Maple Grove Avenue, Springfield" />
+                </div>
+              </div>
+              <div class="panel__foot" style="padding:1rem 0 0;border-top:0">
+                <button class="btn btn-primary btn-sm" type="button">Save changes</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" data-reveal="up" data-reveal-delay="80">
+            <div class="panel__head">
+              <h2>Notifications</h2>
+            </div>
+            <div class="panel__body">
+              <div class="dash-switch">
+                <div class="dash-switch__txt"><strong>New enrolment requests</strong><small>Email me when a new application arrives</small></div>
+                <label class="switch"><input type="checkbox" checked /><span></span></label>
+              </div>
+              <div class="dash-switch">
+                <div class="dash-switch__txt"><strong>Fee payments</strong><small>Alert on each payment received</small></div>
+                <label class="switch"><input type="checkbox" checked /><span></span></label>
+              </div>
+              <div class="dash-switch">
+                <div class="dash-switch__txt"><strong>Parent messages</strong><small>Notify on new inbox activity</small></div>
+                <label class="switch"><input type="checkbox" checked /><span></span></label>
+              </div>
+              <div class="dash-switch">
+                <div class="dash-switch__txt"><strong>Weekly summary</strong><small>Send a digest every Monday</small></div>
+                <label class="switch"><input type="checkbox" /><span></span></label>
+              </div>
+              <div class="dash-switch">
+                <div class="dash-switch__txt"><strong>Attendance alerts</strong><small>Flag classes below 90% attendance</small></div>
+                <label class="switch"><input type="checkbox" checked /><span></span></label>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel" data-reveal="up">
+          <div class="panel__head">
+            <h2>Account &amp; security</h2>
+          </div>
+          <div class="panel__body">
+            <div class="form-grid">
+              <div class="field">
+                <label for="adminName">Administrator name</label>
+                <input type="text" id="adminName" value="Ms. Rivera" />
+              </div>
+              <div class="field">
+                <label for="adminEmail">Login email</label>
+                <input type="email" id="adminEmail" value="admin@stackly.school" />
+              </div>
+              <div class="field">
+                <label for="adminPass">New password</label>
+                <input type="password" id="adminPass" placeholder="••••••••" />
+              </div>
+              <div class="field">
+                <label for="adminPass2">Confirm password</label>
+                <input type="password" id="adminPass2" placeholder="••••••••" />
+              </div>
+            </div>
+            <div class="panel__foot" style="padding:1rem 0 0;border-top:0;display:flex;gap:0.6rem;flex-wrap:wrap">
+              <button class="btn btn-primary btn-sm" type="button">Update account</button>
+              <button class="btn btn-outline btn-sm" type="button">Enable 2FA</button>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="dash-scrim" id="dashScrim" hidden></div>
+
+  <script src="js/dash-menu.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</body>
+</html>

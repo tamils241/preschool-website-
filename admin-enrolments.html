@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stackly Preschool — manage student enrolments, admissions and class placements." />
+  <meta name="theme-color" content="#4cc3f0" />
+  <title>Students | Admin | Stackly Preschool</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body data-page="admin-enrolments">
+
+  <a class="skip-link" href="#dashMain">Skip to content</a>
+
+  <div class="dash">
+    <div data-dash-side></div>
+
+    <div class="dash-body">
+      <div data-dash-top data-title="Students" data-subtitle="248 enrolled · 12 classes" data-search="Search students…"></div>
+
+      <main class="dash-main" id="dashMain">
+
+        <section class="dash-stats" aria-label="Enrolment summary">
+          <article class="dash-stat" data-reveal="up">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-sky">&#127891;</span><span class="dash-stat__delta">+12</span></div>
+            <span class="dash-stat__num">248</span>
+            <span class="dash-stat__label">Total enrolled</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="70">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-warm">&#9203;</span><span class="dash-stat__delta">Needs review</span></div>
+            <span class="dash-stat__num">9</span>
+            <span class="dash-stat__label">Pending applications</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="140">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-mint">&#9989;</span><span class="dash-stat__delta">This month</span></div>
+            <span class="dash-stat__num">31</span>
+            <span class="dash-stat__label">Confirmed</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="210">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-yellow">&#128101;</span><span class="dash-stat__delta">3 slots left</span></div>
+            <span class="dash-stat__num">6</span>
+            <span class="dash-stat__label">On waitlist</span>
+          </article>
+        </section>
+
+        <section class="panel" data-reveal="up">
+          <div class="panel__head">
+            <h2>All students</h2>
+            <a class="btn btn-primary btn-sm" href="#">+ Add student</a>
+          </div>
+          <div class="panel__body">
+            <div class="dash-toolbar">
+              <button type="button" class="filter-btn is-active">All</button>
+              <button type="button" class="filter-btn">Enrolled</button>
+              <button type="button" class="filter-btn">Pending</button>
+              <button type="button" class="filter-btn">Waitlist</button>
+              <span class="spacer"></span>
+              <button type="button" class="btn btn-outline btn-sm">Export CSV</button>
+            </div>
+            <div class="table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr><th>Student</th><th>Program</th><th>Class</th><th>Guardian</th><th>Contact</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="u"><span class="u__av">EJ</span><strong>Emma Johnson</strong></span></td>
+                    <td>Nursery</td><td>Nursery A</td><td>Sara Johnson</td><td>+1 202 555 0134</td>
+                    <td><span class="pill ok">Enrolled</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="u"><span class="u__av warm">LP</span><strong>Liam Patel</strong></span></td>
+                    <td>Playgroup</td><td>Playgroup B</td><td>Anita Patel</td><td>+1 202 555 0177</td>
+                    <td><span class="pill warn">Pending</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="u"><span class="u__av mint">NK</span><strong>Noah Kim</strong></span></td>
+                    <td>Toddler</td><td>Toddler 1</td><td>Grace Kim</td><td>+1 202 555 0190</td>
+                    <td><span class="pill ok">Enrolled</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="u"><span class="u__av">AG</span><strong>Ava Garcia</strong></span></td>
+                    <td>Lower KG</td><td>LKG A</td><td>Mia Garcia</td><td>+1 202 555 0122</td>
+                    <td><span class="pill info">Waitlist</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="u"><span class="u__av warm">OB</span><strong>Oliver Brown</strong></span></td>
+                    <td>Upper KG</td><td>UKG A</td><td>Emma Brown</td><td>+1 202 555 0143</td>
+                    <td><span class="pill ok">Enrolled</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="u"><span class="u__av mint">SD</span><strong>Sofia Diaz</strong></span></td>
+                    <td>Nursery</td><td>Nursery B</td><td>Lucas Diaz</td><td>+1 202 555 0165</td>
+                    <td><span class="pill ok">Enrolled</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="u"><span class="u__av">MN</span><strong>Mason Nguyen</strong></span></td>
+                    <td>Playgroup</td><td>Playgroup A</td><td>Lily Nguyen</td><td>+1 202 555 0188</td>
+                    <td><span class="pill danger">Incomplete</span></td>
+                  </tr>
+                  <tr>
+                    <td><span class="u"><span class="u__av warm">IC</span><strong>Isla Chen</strong></span></td>
+                    <td>Lower KG</td><td>LKG B</td><td>Wei Chen</td><td>+1 202 555 0110</td>
+                    <td><span class="pill ok">Enrolled</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <nav class="dash-pager" aria-label="Pagination">
+              <a class="is-disabled" href="#">&laquo;</a>
+              <span class="is-active">1</span>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">&raquo;</a>
+            </nav>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="dash-scrim" id="dashScrim" hidden></div>
+
+  <script src="js/dash-menu.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</body>
+</html>

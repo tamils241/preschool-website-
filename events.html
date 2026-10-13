@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Upcoming Stackly Preschool events — annual day, sports day, storytelling festival, parent meetings, science fair and more. Filter by event category." />
+  <meta name="theme-color" content="#4cc3f0" />
+  <title>Events | Stackly Preschool</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body data-page="events">
+
+  <div data-component="header"></div>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow orange" data-reveal="up">What's On</span>
+        <h1 data-reveal="up">Events &amp; school activities</h1>
+        <p class="lead" data-reveal="up">A joyful calendar of celebrations, learning festivals and family gatherings at Stackly Preschool.</p>
+        <nav class="breadcrumb" aria-label="Breadcrumb" data-reveal="up">
+          <a href="index.html">Home</a><span class="sep">/</span><span aria-current="page">Events</span>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- Filters -->
+        <div class="filters" data-filter-group="events" role="group" aria-label="Filter events by category" data-reveal="up">
+          <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All Events</button>
+          <button type="button" class="filter-btn" data-filter="celebrations" aria-pressed="false">Celebrations</button>
+          <button type="button" class="filter-btn" data-filter="sports" aria-pressed="false">Sports</button>
+          <button type="button" class="filter-btn" data-filter="learning" aria-pressed="false">Learning</button>
+          <button type="button" class="filter-btn" data-filter="community" aria-pressed="false">Community</button>
+          <button type="button" class="filter-btn" data-filter="meetings" aria-pressed="false">Meetings</button>
+        </div>
+
+        <p class="sr-only" data-filter-live="events" aria-live="polite"></p>
+
+        <!-- Event cards -->
+        <div class="grid grid-3" data-filter-items="events">
+
+          <article class="card filter-item" data-category="celebrations" data-reveal="up">
+            <div class="card__media"><img src="images/events/annual-day.webp" alt="Annual day celebration on stage" width="800" height="550" loading="lazy" /><span class="card__badge orange">Mar 14</span></div>
+            <div class="card__body">
+              <span class="card__meta">Celebrations · 5:00 PM</span>
+              <h3 class="card__title">Annual Day Celebration</h3>
+              <p class="card__text">An evening of songs, dances and proud little performers shining on stage.</p>
+              <div class="card__foot"><a href="contact.html#enquiry" class="btn btn-outline btn-sm">Event Enquiry</a></div>
+            </div>
+          </article>
+
+          <article class="card filter-item" data-category="sports" data-reveal="up" data-reveal-delay="80">
+            <div class="card__media"><img src="images/events/sports-day.webp" alt="Children at sports day" width="800" height="550" loading="lazy" /><span class="card__badge mint">Apr 05</span></div>
+            <div class="card__body">
+              <span class="card__meta">Sports · 9:00 AM</span>
+              <h3 class="card__title">Little Champions Sports Day</h3>
+              <p class="card__text">Fun races, team games and medals for every happy participant.</p>
+              <div class="card__foot"><a href="contact.html#enquiry" class="btn btn-outline btn-sm">Event Enquiry</a></div>
+            </div>
+          </article>
+
+          <article class="card filter-item" data-category="learning" data-reveal="up" data-reveal-delay="160">
+            <div class="card__media"><img src="images/events/story-day.webp" alt="Storytelling festival" width="800" height="550" loading="lazy" /><span class="card__badge">Apr 22</span></div>
+            <div class="card__body">
+              <span class="card__meta">Learning · 10:00 AM</span>
+              <h3 class="card__title">Storytelling Festival</h3>
+              <p class="card__text">Puppets, costumes and imaginative tales to spark a love of reading.</p>
+              <div class="card__foot"><a href="contact.html#enquiry" class="btn btn-outline btn-sm">Event Enquiry</a></div>
+            </div>
+          </article>
+
+          <article class="card filter-item" data-category="learning" data-reveal="up">
+            <div class="card__media"><img src="images/events/science-fair.webp" alt="Science and discovery fair" width="800" height="550" loading="lazy" /><span class="card__badge" style="color:var(--sky-600)">May 09</span></div>
+            <div class="card__body">
+              <span class="card__meta">Learning · 10:30 AM</span>
+              <h3 class="card__title">Science &amp; Discovery Fair</h3>
+              <p class="card__text">Hands-on experiments and wonder-filled STEM activities for little explorers.</p>
+              <div class="card__foot"><a href="contact.html#enquiry" class="btn btn-outline btn-sm">Event Enquiry</a></div>
+            </div>
+          </article>
+
+          <article class="card filter-item" data-category="meetings" data-reveal="up" data-reveal-delay="80">
+            <div class="card__media"><img src="images/events/parent-meeting.webp" alt="Parent teacher meeting" width="800" height="550" loading="lazy" /><span class="card__badge pink">May 24</span></div>
+            <div class="card__body">
+              <span class="card__meta">Meeting · 4:00 PM</span>
+              <h3 class="card__title">Parent–Teacher Meeting</h3>
+              <p class="card__text">One-to-one time to celebrate progress and plan the term ahead together.</p>
+              <div class="card__foot"><a href="contact.html#enquiry" class="btn btn-outline btn-sm">Event Enquiry</a></div>
+            </div>
+          </article>
+
+          <article class="card filter-item" data-category="celebrations community" data-reveal="up" data-reveal-delay="160">
+            <div class="card__media"><img src="images/events/festival.webp" alt="Festival celebration carnival" width="800" height="550" loading="lazy" /><span class="card__badge orange">Jun 18</span></div>
+            <div class="card__body">
+              <span class="card__meta">Celebrations · 11:00 AM</span>
+              <h3 class="card__title">Summer Festival Carnival</h3>
+              <p class="card__text">Games, food stalls, face painting and family fun to close the term.</p>
+              <div class="card__foot"><a href="contact.html#enquiry" class="btn btn-outline btn-sm">Event Enquiry</a></div>
+            </div>
+          </article>
+
+          <article class="card filter-item" data-category="community meetings" data-reveal="up">
+            <div class="card__media"><img src="images/classrooms/classroom-1.webp" alt="Open house campus tour" width="800" height="550" loading="lazy" /><span class="card__badge mint">Ongoing</span></div>
+            <div class="card__body">
+              <span class="card__meta">Community · By appointment</span>
+              <h3 class="card__title">Open House &amp; Campus Tours</h3>
+              <p class="card__text">Visit our classrooms, meet teachers and see Stackly in action any weekday.</p>
+              <div class="card__foot"><a href="contact.html#tour" class="btn btn-outline btn-sm">Book a Tour</a></div>
+            </div>
+          </article>
+
+          <article class="card filter-item" data-category="celebrations" data-reveal="up" data-reveal-delay="80">
+            <div class="card__media"><img src="images/programs/ukg.webp" alt="Kindergarten graduation ceremony" width="800" height="550" loading="lazy" /><span class="card__badge pink">Jul 02</span></div>
+            <div class="card__body">
+              <span class="card__meta">Celebrations · 10:00 AM</span>
+              <h3 class="card__title">Kindergarten Graduation</h3>
+              <p class="card__text">A proud milestone as our oldest learners get ready for primary school.</p>
+              <div class="card__foot"><a href="contact.html#enquiry" class="btn btn-outline btn-sm">Event Enquiry</a></div>
+            </div>
+          </article>
+
+          <article class="card filter-item" data-category="learning celebrations" data-reveal="up" data-reveal-delay="160">
+            <div class="card__media"><img src="images/activities/art.webp" alt="Children at an art and music showcase" width="800" height="550" loading="lazy" /><span class="card__badge">Aug 15</span></div>
+            <div class="card__body">
+              <span class="card__meta">Learning · 3:00 PM</span>
+              <h3 class="card__title">Art &amp; Music Showcase</h3>
+              <p class="card__text">A colourful afternoon of paintings, songs and instruments made by our little artists.</p>
+              <div class="card__foot"><a href="contact.html#enquiry" class="btn btn-outline btn-sm">Event Enquiry</a></div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="text-center" data-filter-empty="events" hidden style="color:var(--muted)">No events match this filter yet.</p>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="container">
+        <div class="cta-band" data-reveal="zoom">
+          <h2>Never miss a Stackly moment</h2>
+          <p>Subscribe to our newsletter for event reminders, photos and school news.</p>
+          <div class="btn-group">
+            <a href="contact.html#enquiry" class="btn btn-white btn-lg">Enquire About an Event</a>
+            <a href="admissions.html" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.7);color:#fff">Apply for Admission</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-component="footer"></div>
+
+  <script src="js/navigation.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/events.js" defer></script>
+</body>
+</html>

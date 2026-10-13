@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stackly Preschool parent portal — photo albums and moments from your child's class." />
+  <meta name="theme-color" content="#4cc3f0" />
+  <title>Photos | Parent Portal | Stackly Preschool</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body data-page="client-photos">
+
+  <a class="skip-link" href="#dashMain">Skip to content</a>
+
+  <div class="dash">
+    <div data-dash-side></div>
+
+    <div class="dash-body">
+      <div data-dash-top data-title="Photos" data-subtitle="3 new this week" data-search="Search albums…"></div>
+
+      <main class="dash-main" id="dashMain">
+
+        <section class="dash-stats" aria-label="Photo summary">
+          <article class="dash-stat" data-reveal="up">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-sky">&#128247;</span><span class="dash-stat__delta">New</span></div>
+            <span class="dash-stat__num">3</span>
+            <span class="dash-stat__label">New photos</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="70">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-mint">&#128218;</span><span class="dash-stat__delta">This term</span></div>
+            <span class="dash-stat__num">6</span>
+            <span class="dash-stat__label">Albums</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="140">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-warm">&#11088;</span><span class="dash-stat__delta">Saved</span></div>
+            <span class="dash-stat__num">12</span>
+            <span class="dash-stat__label">Favourite shots</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="210">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-yellow">&#128197;</span><span class="dash-stat__delta">Latest</span></div>
+            <span class="dash-stat__num">Oct 14</span>
+            <span class="dash-stat__label">Last updated</span>
+          </article>
+        </section>
+
+        <section class="panel" data-reveal="up">
+          <div class="panel__head">
+            <h2>Latest photos</h2>
+            <a class="link" href="gallery.html">Open full gallery</a>
+          </div>
+          <div class="panel__body">
+            <div class="dash-gallery">
+              <a href="gallery.html"><img src="images/gallery/gallery-1.webp" alt="Emma during art time" loading="lazy" /></a>
+              <a href="gallery.html"><img src="images/gallery/gallery-2.webp" alt="Children playing outdoors" loading="lazy" /></a>
+              <a href="gallery.html"><img src="images/gallery/gallery-3.webp" alt="Storytelling session" loading="lazy" /></a>
+              <a href="gallery.html"><img src="images/gallery/gallery-4.webp" alt="Music and movement class" loading="lazy" /></a>
+              <a href="gallery.html"><img src="images/gallery/gallery-5.webp" alt="Sensory play time" loading="lazy" /></a>
+              <a href="gallery.html"><img src="images/gallery/gallery-6.webp" alt="Outdoor games" loading="lazy" /></a>
+              <a href="gallery.html"><img src="images/gallery/gallery-7.webp" alt="Classroom activity" loading="lazy" /></a>
+              <a href="gallery.html"><img src="images/gallery/gallery-8.webp" alt="Group photo" loading="lazy" /></a>
+              <a href="gallery.html"><img src="images/gallery/gallery-9.webp" alt="Craft session" loading="lazy" /></a>
+            </div>
+          </div>
+        </section>
+
+        <div class="dash-grid split-3">
+          <article class="panel" data-reveal="up">
+            <a class="panel__thumb" href="#"><img src="images/gallery/gallery-10.webp" alt="Annual day album" loading="lazy" /></a>
+            <div class="panel__body">
+              <h3 class="panel__title">Annual Day</h3>
+              <div class="panel__meta"><span class="dash-muted">24 photos</span><span class="pill info">Nov 2025</span></div>
+            </div>
+          </article>
+          <article class="panel" data-reveal="up" data-reveal-delay="60">
+            <a class="panel__thumb" href="#"><img src="images/gallery/gallery-11.webp" alt="Sports day album" loading="lazy" /></a>
+            <div class="panel__body">
+              <h3 class="panel__title">Sports Day</h3>
+              <div class="panel__meta"><span class="dash-muted">18 photos</span><span class="pill info">Dec 2025</span></div>
+            </div>
+          </article>
+          <article class="panel" data-reveal="up" data-reveal-delay="120">
+            <a class="panel__thumb" href="#"><img src="images/gallery/gallery-12.webp" alt="Art exhibition album" loading="lazy" /></a>
+            <div class="panel__body">
+              <h3 class="panel__title">Art Exhibition</h3>
+              <div class="panel__meta"><span class="dash-muted">15 photos</span><span class="pill info">Jan 2026</span></div>
+            </div>
+          </article>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="dash-scrim" id="dashScrim" hidden></div>
+
+  <script src="js/dash-menu.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</body>
+</html>

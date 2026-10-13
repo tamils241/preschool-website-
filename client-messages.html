@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stackly Preschool parent portal — messages and conversations with your child's teachers." />
+  <meta name="theme-color" content="#4cc3f0" />
+  <title>Messages | Parent Portal | Stackly Preschool</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body data-page="client-messages">
+
+  <a class="skip-link" href="#dashMain">Skip to content</a>
+
+  <div class="dash">
+    <div data-dash-side></div>
+
+    <div class="dash-body">
+      <div data-dash-top data-title="Messages" data-subtitle="2 unread" data-search="Search messages…"></div>
+
+      <main class="dash-main" id="dashMain">
+
+        <section class="dash-stats" aria-label="Message summary">
+          <article class="dash-stat" data-reveal="up">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-sky">&#128229;</span><span class="dash-stat__delta">New</span></div>
+            <span class="dash-stat__num">2</span>
+            <span class="dash-stat__label">Unread</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="70">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-mint">&#128172;</span><span class="dash-stat__delta">Threads</span></div>
+            <span class="dash-stat__num">5</span>
+            <span class="dash-stat__label">Conversations</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="140">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-warm">&#128105;&#8205;&#127979;</span><span class="dash-stat__delta">Class teacher</span></div>
+            <span class="dash-stat__num">MR</span>
+            <span class="dash-stat__label">Ms. Rivera</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="210">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-yellow">&#9201;</span><span class="dash-stat__delta">Avg</span></div>
+            <span class="dash-stat__num">35m</span>
+            <span class="dash-stat__label">Reply time</span>
+          </article>
+        </section>
+
+        <div class="dash-grid split-2">
+          <section class="panel" data-reveal="up">
+            <div class="panel__head">
+              <h2>Inbox</h2>
+              <a class="btn btn-outline btn-sm" href="#">Mark all read</a>
+            </div>
+            <div class="panel__body">
+              <div class="dash-list">
+                <div class="dash-item">
+                  <span class="u__av">MR</span>
+                  <div class="dash-item__body"><h4>Ms. Rivera</h4><p>Emma had a wonderful day — she loved the rainbow collage!</p><time>9:24 AM</time></div>
+                  <span class="pill danger">New</span>
+                </div>
+                <div class="dash-item">
+                  <span class="u__av mint">AD</span>
+                  <div class="dash-item__body"><h4>Admin Office</h4><p>Winter uniform is now available at the front desk.</p><time>Yesterday</time></div>
+                  <span class="pill danger">New</span>
+                </div>
+                <div class="dash-item">
+                  <span class="u__av warm">JD</span>
+                  <div class="dash-item__body"><h4>Mr. Davis</h4><p>Emma is doing brilliantly in music — great sense of rhythm.</p><time>Mon</time></div>
+                </div>
+                <div class="dash-item">
+                  <span class="u__av">NW</span>
+                  <div class="dash-item__body"><h4>Ms. Ward</h4><p>Reminder: please pack a water bottle every day.</p><time>Fri</time></div>
+                </div>
+                <div class="dash-item">
+                  <span class="u__av mint">AD</span>
+                  <div class="dash-item__body"><h4>Admin Office</h4><p>Your Term 3 receipt is ready to download.</p><time>Sep 30</time></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" data-reveal="up" data-reveal-delay="80">
+            <div class="panel__head">
+              <h2>Conversation</h2>
+              <span class="pill violet">Ms. Rivera</span>
+            </div>
+            <div class="panel__body">
+              <div class="timeline">
+                <div class="tl-item">
+                  <span class="tl-dot ico-sky">S</span>
+                  <div><span class="tl-time">9:12 AM</span><p>Hi! Could we schedule a quick chat about Emma's progress this week?</p></div>
+                </div>
+                <div class="tl-item">
+                  <span class="tl-dot ico-mint">M</span>
+                  <div><span class="tl-time">9:20 AM</span><p>Of course, Sara. Emma's doing wonderfully — she's very confident with her letter sounds now. Are you free Thursday at 4 PM?</p></div>
+                </div>
+                <div class="tl-item">
+                  <span class="tl-dot ico-sky">S</span>
+                  <div><span class="tl-time">9:24 AM</span><p>Thursday works perfectly. See you then!</p></div>
+                </div>
+              </div>
+              <form class="panel__foot" onsubmit="return false" style="display:flex;gap:0.6rem;margin-top:0.4rem">
+                <input type="text" placeholder="Write a reply…" aria-label="Reply" style="flex:1;height:3rem;padding:0 1rem;border:1px solid var(--line);border-radius:12px" />
+                <button class="btn btn-primary btn-sm" type="submit">Send</button>
+              </form>
+            </div>
+          </section>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="dash-scrim" id="dashScrim" hidden></div>
+
+  <script src="js/dash-menu.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore Stackly Preschool activities — art and craft, music and dance, storytelling, outdoor games, nature exploration, sensory play, festivals and STEM. Filter by category." />
+  <meta name="theme-color" content="#4cc3f0" />
+  <title>Activities | Stackly Preschool</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body data-page="activities">
+
+  <div data-component="header"></div>
+
+  <main id="main">
+
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow orange" data-reveal="up">Learning Through Play</span>
+        <h1 data-reveal="up">Activities that spark curiosity</h1>
+        <p class="lead" data-reveal="up">Every activity at Stackly is designed to build skills, confidence and joy. Use the filters to explore what your child will enjoy most.</p>
+        <nav class="breadcrumb" aria-label="Breadcrumb" data-reveal="up">
+          <a href="index.html">Home</a><span class="sep">/</span><span aria-current="page">Activities</span>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- Filter buttons -->
+        <div class="filters" data-filter-group="activities" role="group" aria-label="Filter activities by category" data-reveal="up">
+          <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All Activities</button>
+          <button type="button" class="filter-btn" data-filter="creative" aria-pressed="false">Creative Arts</button>
+          <button type="button" class="filter-btn" data-filter="movement" aria-pressed="false">Music &amp; Movement</button>
+          <button type="button" class="filter-btn" data-filter="discovery" aria-pressed="false">Discovery &amp; Learning</button>
+          <button type="button" class="filter-btn" data-filter="celebration" aria-pressed="false">Celebrations</button>
+        </div>
+
+        <p class="sr-only" data-filter-live="activities" aria-live="polite"></p>
+
+        <!-- Activity cards -->
+        <div class="grid grid-3" data-filter-items="activities">
+
+          <article class="card filter-item" data-category="creative" data-reveal="up">
+            <div class="card__media"><img src="images/activities/art.webp" alt="Children painting and crafting" width="800" height="550" loading="lazy" /><span class="card__badge pink">Creative</span></div>
+            <div class="card__body">
+              <h3 class="card__title">Art &amp; Craft</h3>
+              <p class="card__text">Painting, cutting, gluing and modelling build fine-motor skills and proud little masterpieces.</p>
+              <div class="card-tags"><span class="tag pink">Fine motor</span><span class="tag">Self-expression</span></div>
+            </div>
+          </article>
+
+          <article class="card filter-item" data-category="movement" data-reveal="up" data-reveal-delay="80">
+            <div class="card__media"><img src="images/activities/music.webp" alt="Children singing and dancing" width="800" height="550" loading="lazy" /><span class="card__badge" style="color:var(--violet)">Movement</span></div>
+            <div class="card__body">
+              <h3 class="card__title">Music &amp; Dance</h3>
+              <p class="card__text">Songs, rhymes and movement games develop rhythm, listening and body awareness.</p>
+              <div class="card-tags"><span class="tag">Rhythm</span><span class="tag mint">Coordination</span></div>
+            </div>
+          </article>
+
+          <article class="card filter-item" data-category="discovery" data-reveal="up" data-reveal-delay="160">
+            <div class="card__media"><img src="images/activities/story.webp" alt="Teacher reading a story to children" width="800" height="550" loading="lazy" /><span class="card__badge">Discovery</span></div>
+            <div class="card__body">
+              <h3 class="card__title">Storytelling</h3>
+              <p class="card__text">Puppets, props and imaginative tales grow vocabulary, focus and a love of books.</p>
+              <div class="card-tags"><span class="tag">Literacy</span><span class="tag orange">Imagination</span></div>
+            </div>
+          </article>
+
+          <article class="card filter-item" data-category="movement" data-reveal="up">
+            <div class="card__media"><img src="images/activities/outdoor.webp" alt="Children playing outdoor games" width="800" height="550" loading="lazy" /><span class="card__badge mint">Movement</span></div>
+            <div class="card__body">
+              <h3 class="card__title">Outdoor Games</h3>
+              <p class="card__text">Running, balancing and team games build strong bodies and happy social skills.</p>
+              <div class="card-tags"><span class="tag mint">Gross motor</span><span class="tag">Teamwork</span></div>
+            </div>
+          </article>
+
+          <article class="card filter-item" data-category="discovery" data-reveal="up" data-reveal-delay="80">
+            <div class="card__media"><img src="images/activities/nature.webp" alt="Children exploring plants and nature" width="800" height="550" loading="lazy" /><span class="card__badge mint">Discovery</span></div>
+            <div class="card__body">
+              <h3 class="card__title">Nature Exploration</h3>
+              <p class="card__text">Gardening, leaf hunts and outdoor walks connect children with the natural world.</p>
+              <div class="card-tags"><span class="tag mint">Observation</span><span class="tag">Curiosity</span></div>
+            </div>
+          </article>
+
+          <article class="card filter-item" data-category="creative" data-reveal="up" data-reveal-delay="160">
+            <div class="card__media"><img src="images/activities/sensory.webp" alt="Children exploring a sensory play tray" width="800" height="550" loading="lazy" /><span class="card__badge pink">Creative</span></div>
+            <div class="card__body">
+              <h3 class="card__title">Sensory Play</h3>
+              <p class="card__text">Sand, water, dough and textures support brain development and calm exploration.</p>
+              <div class="card-tags"><span class="tag pink">Sensory</span><span class="tag">Calming</span></div>
+            </div>
+          </article>
+
+          <article class="card filter-item" data-category="celebration" data-reveal="up">
+            <div class="card__media"><img src="images/activities/festival.webp" alt="Children celebrating a festival" width="800" height="550" loading="lazy" /><span class="card__badge orange">Celebration</span></div>
+            <div class="card__body">
+              <h3 class="card__title">Festival Celebrations</h3>
+              <p class="card__text">Festivals and cultural days teach children about community, traditions and togetherness.</p>
+              <div class="card-tags"><span class="tag orange">Culture</span><span class="tag">Community</span></div>
+            </div>
+          </article>
+
+          <article class="card filter-item" data-category="discovery" data-reveal="up" data-reveal-delay="80">
+            <div class="card__media"><img src="images/activities/stem.webp" alt="Children doing a hands-on science activity" width="800" height="550" loading="lazy" /><span class="card__badge" style="color:var(--sky-600)">Discovery</span></div>
+            <div class="card__body">
+              <h3 class="card__title">STEM &amp; Hands-On</h3>
+              <p class="card__text">Simple science, building and problem-solving challenges spark early critical thinking.</p>
+              <div class="card-tags"><span class="tag">Problem solving</span><span class="tag mint">Discovery</span></div>
+            </div>
+          </article>
+
+          <article class="card filter-item" data-category="movement" data-reveal="up" data-reveal-delay="160">
+            <div class="card__media"><img src="images/activities/yoga.webp" alt="Children practising yoga and mindfulness" width="800" height="550" loading="lazy" /><span class="card__badge mint">Movement</span></div>
+            <div class="card__body">
+              <h3 class="card__title">Yoga &amp; Mindfulness</h3>
+              <p class="card__text">Gentle stretches, breathing games and quiet time help children feel calm, focused and strong.</p>
+              <div class="card-tags"><span class="tag mint">Calming</span><span class="tag">Body awareness</span></div>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="text-center" data-filter-empty="activities" hidden style="color:var(--muted)">No activities match this filter yet.</p>
+
+        <!-- Activity schedule strip -->
+        <div class="section-head" style="margin-top:clamp(2.5rem,5vw,4rem)" data-reveal="up">
+          <span class="eyebrow">Everyday Balance</span>
+          <h2>A typical day, beautifully balanced</h2>
+        </div>
+        <div class="steps cols-4">
+          <article class="step" data-reveal="up"><span class="step__num">1</span><h3>Morning Circle</h3><p>Songs, greetings and a look at the day ahead.</p></article>
+          <article class="step" data-reveal="up" data-reveal-delay="80"><span class="step__num">2</span><h3>Focused Learning</h3><p>Phonics, numbers and small-group guided play.</p></article>
+          <article class="step" data-reveal="up" data-reveal-delay="160"><span class="step__num">3</span><h3>Creative &amp; Outdoor</h3><p>Art, music, sensory play and outdoor exploration.</p></article>
+          <article class="step" data-reveal="up" data-reveal-delay="240"><span class="step__num">4</span><h3>Story &amp; Wind Down</h3><p>Storytime, reflection and getting ready for home.</p></article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-component="footer"></div>
+
+  <script src="js/navigation.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/activities.js" defer></script>
+</body>
+</html>

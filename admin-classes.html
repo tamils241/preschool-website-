@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stackly Preschool — manage classes, rooms, schedules and teacher assignments." />
+  <meta name="theme-color" content="#4cc3f0" />
+  <title>Classes | Admin | Stackly Preschool</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body data-page="admin-classes">
+
+  <a class="skip-link" href="#dashMain">Skip to content</a>
+
+  <div class="dash">
+    <div data-dash-side></div>
+
+    <div class="dash-body">
+      <div data-dash-top data-title="Classes" data-subtitle="12 classes · 4 programs" data-search="Search classes…"></div>
+
+      <main class="dash-main" id="dashMain">
+
+        <section class="dash-stats" aria-label="Class summary">
+          <article class="dash-stat" data-reveal="up">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-sky">&#127978;</span><span class="dash-stat__delta">Running</span></div>
+            <span class="dash-stat__num">12</span>
+            <span class="dash-stat__label">Active classes</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="70">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-mint">&#128101;</span><span class="dash-stat__delta">Avg 20</span></div>
+            <span class="dash-stat__num">248</span>
+            <span class="dash-stat__label">Students placed</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="140">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-warm">&#127979;</span><span class="dash-stat__delta">Capacity 100%</span></div>
+            <span class="dash-stat__num">8</span>
+            <span class="dash-stat__label">Rooms in use</span>
+          </article>
+          <article class="dash-stat" data-reveal="up" data-reveal-delay="210">
+            <div class="dash-stat__top"><span class="dash-stat__ico ico-yellow">&#128101;</span><span class="dash-stat__delta">Seats open</span></div>
+            <span class="dash-stat__num">6</span>
+            <span class="dash-stat__label">Available slots</span>
+          </article>
+        </section>
+
+        <section class="panel" data-reveal="up">
+          <div class="panel__head">
+            <h2>Class schedule</h2>
+            <a class="btn btn-primary btn-sm" href="#">+ New class</a>
+          </div>
+          <div class="panel__body">
+            <div class="dash-toolbar">
+              <button type="button" class="filter-btn is-active">All programs</button>
+              <button type="button" class="filter-btn">Toddler</button>
+              <button type="button" class="filter-btn">Playgroup</button>
+              <button type="button" class="filter-btn">Nursery</button>
+              <button type="button" class="filter-btn">Kindergarten</button>
+            </div>
+            <div class="table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr><th>Class</th><th>Program</th><th>Teacher</th><th>Room</th><th>Time</th><th>Seats</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>Toddler 1</strong></td><td>Toddler</td><td>Ms. Ward</td><td>Sun Room</td><td>8:30 – 12:00</td><td><span class="pill ok">14 / 16</span></td></tr>
+                  <tr><td><strong>Playgroup A</strong></td><td>Playgroup</td><td>Ms. Lewis</td><td>Green Room</td><td>8:30 – 12:30</td><td><span class="pill ok">18 / 20</span></td></tr>
+                  <tr><td><strong>Playgroup B</strong></td><td>Playgroup</td><td>Mr. Davis</td><td>Green Room</td><td>8:30 – 12:30</td><td><span class="pill warn">20 / 20</span></td></tr>
+                  <tr><td><strong>Nursery A</strong></td><td>Nursery</td><td>Ms. Rivera</td><td>Blue Room</td><td>8:00 – 1:00</td><td><span class="pill ok">21 / 24</span></td></tr>
+                  <tr><td><strong>Nursery B</strong></td><td>Nursery</td><td>Ms. Hayes</td><td>Blue Room</td><td>8:00 – 1:00</td><td><span class="pill ok">19 / 24</span></td></tr>
+                  <tr><td><strong>LKG A</strong></td><td>Kindergarten</td><td>Ms. Turner</td><td>Yellow Room</td><td>8:00 – 2:00</td><td><span class="pill ok">22 / 24</span></td></tr>
+                  <tr><td><strong>UKG A</strong></td><td>Kindergarten</td><td>Mr. Brooks</td><td>Yellow Room</td><td>8:00 – 2:30</td><td><span class="pill ok">23 / 24</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="dash-scrim" id="dashScrim" hidden></div>
+
+  <script src="js/dash-menu.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</body>
+</html>

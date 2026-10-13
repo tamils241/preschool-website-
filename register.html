@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Create a Stackly Preschool parent account to follow your child's learning journey." />
+  <meta name="theme-color" content="#4cc3f0" />
+  <title>Register | Stackly Preschool</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body data-page="register">
+
+  <main id="main">
+    <section class="section auth-section">
+      <div class="container">
+        <div class="auth auth--register" data-reveal="up">
+          <aside class="auth__aside">
+            <span class="auth__blob a" aria-hidden="true"></span>
+            <span class="auth__blob b" aria-hidden="true"></span>
+            <a class="auth__brand" href="index.html" aria-label="Stackly Preschool home">
+              <img src="images/logo/logo.webp" alt="Stackly Preschool" class="logo-img" width="151" height="44" />
+            </a>
+            <div class="auth__aside-body">
+              <h2>Join the Stackly family</h2>
+              <p>Create your parent account in a minute and stay connected to your child's day, every day.</p>
+              <ul class="checklist">
+                <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span> Secure, private parent portal</li>
+                <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span> Real-time daily updates</li>
+                <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></span> Easy event &amp; fee tracking</li>
+              </ul>
+            </div>
+            <p class="auth__aside-foot">Already have an account? <a href="login.html">Login</a></p>
+          </aside>
+
+          <div class="auth__panel">
+            <div class="auth__head">
+              <span class="eyebrow pink">Get Started</span>
+              <h1>Create your account</h1>
+              <p>Fill in your details to register as a parent.</p>
+            </div>
+
+            <form data-form="register" novalidate>
+              <div class="form-status" data-status aria-live="polite"></div>
+              <fieldset class="role-select" style="margin-bottom:1.1rem">
+                <legend>I am registering as <span class="req">*</span></legend>
+                <div class="role-toggle">
+                  <input type="radio" id="regRoleClient" name="role" value="client" class="role-radio" checked />
+                  <label class="role-option" for="regRoleClient">
+                    <span class="role-option__ico" aria-hidden="true">&#128106;</span>
+                    <span class="role-option__txt"><strong>Client</strong><small>Parent / Guardian</small></span>
+                  </label>
+                  <input type="radio" id="regRoleAdmin" name="role" value="admin" class="role-radio" />
+                  <label class="role-option" for="regRoleAdmin">
+                    <span class="role-option__ico" aria-hidden="true">&#128737;</span>
+                    <span class="role-option__txt"><strong>Admin</strong><small>Staff / Management</small></span>
+                  </label>
+                </div>
+              </fieldset>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="regFirst">First name <span class="req">*</span></label>
+                  <input type="text" id="regFirst" name="firstName" required autocomplete="given-name" placeholder="Jane" />
+                  <span class="error" data-error></span>
+                </div>
+                <div class="field">
+                  <label for="regLast">Last name <span class="req">*</span></label>
+                  <input type="text" id="regLast" name="lastName" required autocomplete="family-name" placeholder="Doe" />
+                  <span class="error" data-error></span>
+                </div>
+                <div class="field">
+                  <label for="regEmail">Email address <span class="req">*</span></label>
+                  <input type="email" id="regEmail" name="email" required autocomplete="email" placeholder="you@example.com" />
+                  <span class="error" data-error></span>
+                </div>
+                <div class="field">
+                  <label for="regPhone">Phone number <span class="req">*</span></label>
+                  <input type="tel" id="regPhone" name="phone" required autocomplete="tel" placeholder="+1 (555) 000-0000" />
+                  <span class="error" data-error></span>
+                </div>
+                <div class="field">
+                  <label for="regChild">Child's name <span class="req">*</span></label>
+                  <input type="text" id="regChild" name="childName" required placeholder="Child's full name" />
+                  <span class="error" data-error></span>
+                </div>
+                <div class="field">
+                  <label for="regProgram">Program <span class="req">*</span></label>
+                  <select id="regProgram" name="program" required>
+                    <option value="">Select a program</option>
+                    <option value="toddler">Toddler Program</option>
+                    <option value="playgroup">Playgroup</option>
+                    <option value="nursery">Nursery</option>
+                    <option value="lkg">Lower Kindergarten</option>
+                    <option value="ukg">Upper Kindergarten</option>
+                  </select>
+                  <span class="error" data-error></span>
+                </div>
+                <div class="field">
+                  <label for="regPass">Password <span class="req">*</span></label>
+                  <div class="pass-wrap">
+                    <input type="password" id="regPass" name="password" required minlength="8" autocomplete="new-password" placeholder="At least 8 characters" />
+                    <button type="button" class="pass-toggle" data-toggle-password aria-controls="regPass" aria-pressed="false" aria-label="Show password"></button>
+                  </div>
+                  <span class="error" data-error></span>
+                </div>
+                <div class="field">
+                  <label for="regConfirm">Confirm password <span class="req">*</span></label>
+                  <div class="pass-wrap">
+                    <input type="password" id="regConfirm" name="confirmPassword" required data-match="#regPass" data-match-msg="Passwords do not match." autocomplete="new-password" placeholder="Re-enter your password" />
+                    <button type="button" class="pass-toggle" data-toggle-password aria-controls="regConfirm" aria-pressed="false" aria-label="Show password"></button>
+                  </div>
+                  <span class="error" data-error></span>
+                </div>
+                <div class="field field-check full">
+                  <input type="checkbox" id="regTerms" name="terms" required />
+                  <label for="regTerms">I agree to the <a href="terms.html">Terms &amp; Conditions</a> and <a href="privacy-policy.html">Privacy Policy</a>.</label>
+                  <span class="error" data-error></span>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg btn-block" style="margin-top:1.3rem">Create account</button>
+              <p class="auth__foot">Already registered? <a href="login.html">Login instead</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/forms.js" defer></script>
+  <script src="js/auth.js" defer></script>
+</body>
+</html>
