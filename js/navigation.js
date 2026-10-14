@@ -235,7 +235,7 @@
       hamburger.setAttribute("aria-expanded", "true");
       hamburger.setAttribute("aria-label", "Close navigation menu");
       panel.setAttribute("aria-hidden", "false");
-      document.body.style.overflow = "hidden";
+      document.body.classList.toggle("menu-open", true);
       var first = panel.querySelector(".panel-close");
       if (first) first.focus();
     }
@@ -247,7 +247,7 @@
       hamburger.setAttribute("aria-expanded", "false");
       hamburger.setAttribute("aria-label", "Open navigation menu");
       panel.setAttribute("aria-hidden", "true");
-      document.body.style.overflow = "";
+      document.body.classList.toggle("menu-open", false);
       window.setTimeout(function () { scrim.hidden = true; }, 320);
       if (lastFocused && typeof lastFocused.focus === "function") lastFocused.focus();
     }

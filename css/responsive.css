@@ -262,3 +262,47 @@
   body { color: #000; }
   a { text-decoration: underline; }
 }
+
+/* ---------------------------------------------------------
+   Final mobile navigation override
+   Keeps the slide-out menu above the sticky site header so
+   the header can no longer cover the top of the menu links.
+   --------------------------------------------------------- */
+@media (max-width: 767px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .mobile-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1101;
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  .mobile-panel__head {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: #fff;
+  }
+
+  .nav-scrim {
+    z-index: 1100;
+  }
+}
+
+@media (max-width: 359px) {
+  .mobile-panel {
+    width: 92vw;
+  }
+
+  .mobile-panel__head .logo-img {
+    max-width: 125px;
+  }
+}

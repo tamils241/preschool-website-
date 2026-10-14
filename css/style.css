@@ -471,77 +471,9 @@ strong { font-weight: 600; color: var(--ink); }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { top: 21.5px; transform: rotate(-45deg); }
 
-/* Mobile slide-out panel (built by navigation.js) */
-.nav-scrim {
-  position: fixed;
-  inset: 0;
-  background: rgba(34, 49, 78, 0.5);
-  backdrop-filter: blur(2px);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s var(--ease), visibility 0.3s var(--ease);
-  z-index: 998;
-}
-.nav-scrim.open { opacity: 1; visibility: visible; }
-
-.mobile-panel {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100dvh;
-  width: min(86vw, 360px);
-  background: var(--paper);
-  z-index: 999;
-  padding: 1.4rem 1.4rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  transform: translateX(105%);
-  transition: transform 0.42s var(--ease);
-  box-shadow: -20px 0 60px rgba(34, 49, 78, 0.2);
-  overflow-y: auto;
-}
-.mobile-panel.open { transform: translateX(0); }
-
-.mobile-panel__head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-.panel-close {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  background: var(--pink-050);
-  color: var(--pink-600);
-  display: grid;
-  place-items: center;
-  font-size: 1.1rem;
-  transition: background 0.2s var(--ease), transform 0.2s var(--ease);
-}
-.panel-close:hover { background: var(--pink-050); transform: rotate(90deg); filter: brightness(0.97); }
-.panel-close svg { width: 20px; height: 20px; }
-
-.mobile-panel .mobile-links { display: flex; flex-direction: column; gap: 0.2rem; }
-.mobile-panel .mobile-links a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.85rem 1rem;
-  border-radius: var(--r-sm);
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: var(--ink);
-  transition: background 0.2s var(--ease), color 0.2s var(--ease), padding 0.2s var(--ease);
-}
-.mobile-panel .mobile-links a:hover,
-.mobile-panel .mobile-links a.active { background: var(--sky-050); color: var(--sky-600); padding-left: 1.25rem; }
-
-.mobile-panel .panel-foot { margin-top: auto; display: grid; gap: 0.85rem; }
-.mobile-panel .panel-contact { font-size: 0.88rem; color: var(--ink-soft); display: grid; gap: 0.35rem; }
-.mobile-panel .panel-contact a { color: var(--sky-600); font-weight: 500; }
+/* Mobile slide-out panel (built by navigation.js)
+   Base styles now live in the "MOBILE NAVIGATION — OVERLAP FIX"
+   block at the end of this file so the panel sits above the header. */
 
 /* Social icon buttons */
 .socials { display: flex; gap: 0.55rem; }
@@ -1786,5 +1718,208 @@ strong { font-weight: 600; color: var(--ink); }
 @media (max-width: 767px) {
   .auth--register .form-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ==========================================
+   MOBILE NAVIGATION — OVERLAP FIX
+   Placed at the END of css/style.css so the
+   slide-out menu sits ABOVE the site header.
+   ========================================== */
+
+.nav-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  background: rgba(34, 49, 78, 0.52);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-scrim.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  height: 100dvh;
+  width: min(88vw, 360px);
+  max-width: 100%;
+  box-sizing: border-box;
+  z-index: 1101;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  padding: 0 1rem 1.25rem;
+  background: #fff;
+  box-shadow: -12px 0 35px rgba(34, 49, 78, 0.18);
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+
+  transform: translateX(105%);
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    transform 0.35s ease,
+    visibility 0.35s ease;
+}
+
+.mobile-panel.open {
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Keep logo and close button in one clean row */
+.mobile-panel__head {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+
+  flex: 0 0 auto;
+  min-height: 76px;
+  padding: 0.75rem 0;
+  margin: 0;
+
+  background: #fff;
+  border-bottom: 1px solid #e9edf6;
+}
+
+/* Prevent the logo from pushing the close button off-screen */
+.mobile-panel__head .logo {
+  display: inline-flex;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: calc(100% - 54px);
+}
+
+.mobile-panel__head .logo-img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 38px;
+  object-fit: contain;
+}
+
+.mobile-panel__head .panel-close {
+  display: grid;
+  place-items: center;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  margin: 0;
+  padding: 0;
+  background: #e8f7fe;
+  color: #22314e;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  transition: background 0.2s var(--ease), transform 0.2s var(--ease);
+}
+
+.mobile-panel__head .panel-close:hover {
+  background: var(--pink-050);
+  transform: rotate(90deg);
+  filter: brightness(0.97);
+}
+
+.mobile-panel__head .panel-close svg { width: 20px; height: 20px; }
+
+/* Keep all links inside the panel */
+.mobile-panel .mobile-links {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  gap: 0.2rem;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-panel .mobile-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  min-width: 0;
+  min-height: 52px;
+  padding: 0.8rem 0.9rem;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+  border-radius: var(--r-sm);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ink);
+  transition: background 0.2s var(--ease), color 0.2s var(--ease), padding 0.2s var(--ease);
+}
+
+.mobile-panel .mobile-links a:hover,
+.mobile-panel .mobile-links a.active {
+  background: var(--sky-050);
+  color: var(--sky-600);
+  padding-left: 1.25rem;
+}
+
+.mobile-panel .panel-foot {
+  flex: 0 0 auto;
+  margin-top: auto;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.mobile-panel .panel-contact {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  display: grid;
+  gap: 0.35rem;
+}
+
+.mobile-panel .panel-contact a { color: var(--sky-600); font-weight: 500; }
+
+/* Stop the page behind the menu from scrolling */
+body.menu-open {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+@media (max-width: 480px) {
+  .mobile-panel {
+    width: min(88vw, 360px);
+    padding-inline: 0.85rem;
+  }
+
+  .mobile-panel__head {
+    min-height: 70px;
+  }
+
+  .mobile-panel__head .logo-img {
+    height: 34px;
+  }
+
+  .mobile-panel .mobile-links a {
+    min-height: 50px;
+    padding: 0.7rem 0.8rem;
+    font-size: 1rem;
   }
 }
