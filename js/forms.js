@@ -24,8 +24,9 @@
     else fn();
   }
 
-  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  var EMAIL_RE = /^[A-Za-z0-9._%+-]+@([A-Za-z][A-Za-z0-9-]*\.)+[A-Za-z]{2,}$/;
   var PHONE_RE = /^[+]?[\d\s().-]{7,18}$/;
+  var STRONG_PASS_RE = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/;
 
   function getFieldParts(input) {
     return input.closest(".field");
@@ -61,10 +62,11 @@
 
     // Required
     if (input.hasAttribute("required")) {
+      var reqMsg = input.getAttribute("data-required-msg");
       if (type === "checkbox") {
-        if (!input.checked) return "Please accept the " + label.toLowerCase() + ".";
+        if (!input.checked) return reqMsg || "Please accept the " + label.toLowerCase() + ".";
       } else if (value === "") {
-        return label + " is required.";
+        return reqMsg || label + " is required.";
       }
     }
 
@@ -78,9 +80,39 @@
       }
     }
 
+    if (input.hasAttribute("maxlength")) {
+      var max = parseInt(input.getAttribute("maxlength"), 10);
+      if (!isNaN(max) && value.length > max) {
+        return label + " must be at most " + max + " characters.";
+      }
+    }
+
+    // Letters only (no numbers, spaces or special characters)
+    if (input.hasAttribute("data-alpha-only") && !/^[A-Za-z]+$/.test(value)) {
+      return label + " can only contain letters (no numbers, spaces or special characters).";
+    }
+
+    // Strong password (8+ chars with upper, lower, number and special character)
+    if (input.hasAttribute("data-strong-pass") && !STRONG_PASS_RE.test(value)) {
+      return label + " must be at least 8 characters and include an uppercase letter, a lowercase letter, a number and a special character.";
+    }
+
     // Email
     if (type === "email" && !EMAIL_RE.test(value)) {
       return "Please enter a valid email address.";
+    }
+
+    // Exact number of digits only (e.g. a 10-digit phone number)
+    if (input.hasAttribute("data-digits")) {
+      var digits = parseInt(input.getAttribute("data-digits"), 10);
+      if (!isNaN(digits)) {
+        if (value === "" || !/^\d+$/.test(value)) {
+          return label + " must contain only digits.";
+        }
+        if (value.length !== digits) {
+          return label + " must be exactly " + digits + " digits.";
+        }
+      }
     }
 
     // Phone
@@ -159,6 +191,24 @@
         }
       });
       input.addEventListener("input", function () {
+        if (input.hasAttribute("data-alpha-only")) {
+          var filtered = input.value.replace(/[^A-Za-z]/g, "");
+          if (filtered !== input.value) {
+            var pos = input.selectionStart - (input.value.length - filtered.length);
+            input.value = filtered;
+            if (pos >= 0) input.setSelectionRange(pos, pos);
+          }
+        }
+        if (input.hasAttribute("data-digits")) {
+          var onlyDigits = input.value.replace(/\D/g, "");
+          var dpos = parseInt(input.getAttribute("data-digits"), 10);
+          if (!isNaN(dpos)) onlyDigits = onlyDigits.slice(0, dpos);
+          if (onlyDigits !== input.value) {
+            var cpos = input.selectionStart - (input.value.length - onlyDigits.length);
+            input.value = onlyDigits;
+            if (cpos >= 0) input.setSelectionRange(cpos, cpos);
+          }
+        }
         var field = getFieldParts(input);
         if (field && field.classList.contains("invalid")) {
           setError(input, validateInput(input));
@@ -176,6 +226,8 @@
       var result = validateForm(form);
 
       if (!result.valid) {
+        var firstMsg = result.firstInvalid ? validateInput(result.firstInvalid) : "";
+        alert(firstMsg || "Please fill in all required fields correctly.");
         showStatus(form, "Please correct the highlighted fields and try again.", "error");
         if (result.firstInvalid) {
           result.firstInvalid.focus();
@@ -186,6 +238,17 @@
 
       // Simulate a successful submission (demo only)
       var type = form.getAttribute("data-form");
+
+      // Capture the selected role before the form is reset
+      var redirectTo = null;
+      if (type === "login") {
+        var roleInput = form.querySelector('input[name="role"]:checked');
+        var role = roleInput ? roleInput.value : "client";
+        redirectTo = (role === "admin") ? "admin-dashboard.html" : "clients-dashboard.html";
+      } else if (type === "register") {
+        redirectTo = "login.html";
+      }
+
       var messages = {
         admission: "Thank you! Your admission enquiry has been sent. Our team will contact you within 1–2 working days.",
         contact: "Thank you! Your message has been sent. Our team will contact you within 1–2 working days.",
@@ -211,6 +274,11 @@
 
       var status = form.querySelector("[data-status]");
       if (status) status.scrollIntoView({ block: "center", behavior: "smooth" });
+
+      // Redirect to the selected dashboard after a short success message
+      if (redirectTo) {
+        window.setTimeout(function () { window.location.href = redirectTo; }, 800);
+      }
     });
 
     form.addEventListener("reset", function () {

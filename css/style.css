@@ -1611,6 +1611,7 @@ strong { font-weight: 600; color: var(--ink); }
   font-size: 0.9rem;
   color: var(--ink);
   cursor: pointer;
+  text-decoration: none;
   transition: border-color 0.2s var(--ease), transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
 }
 .auth-social:hover { border-color: var(--sky); transform: translateY(-2px); box-shadow: var(--shadow-xs); }
@@ -1717,3 +1718,73 @@ strong { font-weight: 600; color: var(--ink); }
   transition: border-color 0.2s var(--ease), color 0.2s var(--ease), transform 0.2s var(--ease);
 }
 .chip:hover { border-color: var(--sky); color: var(--sky-600); transform: translateY(-2px); }
+
+/* =========================================================
+   Register form layout fixes (added as overrides)
+   ========================================================= */
+
+/* Keep the terms checkbox and its label side by side, error below */
+.auth--register .field-check {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  align-items: start;
+  gap: 0.6rem;
+  flex-wrap: nowrap;
+  grid-column: 1 / -1;
+}
+
+.auth--register .field-check input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin: 0.2rem 0 0;
+  flex-shrink: 0;
+  cursor: pointer;
+  accent-color: var(--pink-600);
+}
+
+.auth--register .field-check label {
+  display: block;
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.auth--register .field-check .error {
+  grid-column: 1 / -1;
+  width: 100%;
+  margin: 0;
+}
+
+/* Keep the submit button below the checkbox */
+.auth--register form > .btn,
+.auth--register form > button[type="submit"] {
+  margin-top: 1.3rem;
+}
+
+/* Prevent form columns from overflowing */
+.auth--register .form-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
+.auth--register .field {
+  min-width: 0;
+}
+
+.auth--register .field input:not([type="checkbox"]):not([type="radio"]),
+.auth--register .field select {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Stack the form into a single column on small screens (matches responsive.css) */
+@media (max-width: 767px) {
+  .auth--register .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

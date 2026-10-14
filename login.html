@@ -71,7 +71,7 @@
                 <div class="field full">
                   <label for="loginPass">Password <span class="req">*</span></label>
                   <div class="pass-wrap">
-                    <input type="password" id="loginPass" name="password" required autocomplete="current-password" placeholder="Your password" />
+                    <input type="password" id="loginPass" name="password" data-label="Password" minlength="8" data-strong-pass required autocomplete="current-password" placeholder="Your password" />
                     <button type="button" class="pass-toggle" data-toggle-password aria-controls="loginPass" aria-pressed="false" aria-label="Show password"></button>
                   </div>
                   <span class="error" data-error></span>
@@ -80,23 +80,23 @@
 
               <div class="auth-row" style="margin-top:1.1rem">
                 <label style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.88rem;color:var(--ink-soft)">
-                  <input type="checkbox" name="remember" style="width:18px;height:18px;accent-color:var(--sky-600)" /> Remember me
+                  <input type="checkbox" name="remember" data-label="Remember me" data-required-msg="Please tick 'Remember me' to log in." required style="width:18px;height:18px;accent-color:var(--sky-600)" /> Remember me
                 </label>
-                <a href="#">Forgot password?</a>
+                <a href="404.html">Forgot password?</a>
               </div>
 
               <button type="submit" class="btn btn-primary btn-lg btn-block" style="margin-top:1.3rem">Login</button>
 
               <div class="auth-or">or</div>
               <div class="auth-socials">
-                <button type="button" class="auth-social">
+                <a href="404.html" class="auth-social">
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.5a5.6 5.6 0 0 1-2.4 3.7v3h3.9c2.3-2.1 3.5-5.2 3.5-8.9z"/><path fill="#34A853" d="M12 24c3.2 0 5.9-1.1 7.9-2.9l-3.9-3c-1.1.7-2.4 1.2-4 1.2-3.1 0-5.7-2.1-6.6-4.9H1.4v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.4 14.4a7.2 7.2 0 0 1 0-4.6V6.7H1.4a12 12 0 0 0 0 10.8l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.4 6.7l4 3.1C6.3 6.9 8.9 4.8 12 4.8z"/></svg>
                   Google
-                </button>
-                <button type="button" class="auth-social">
+                </a>
+                <a href="404.html" class="auth-social">
                   <svg viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true"><path d="M24 12a12 12 0 1 0-13.9 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.6 4.5-4.6 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-1.9.9-1.9 1.8V12h3.3l-.5 3.5h-2.8v8.4A12 12 0 0 0 24 12z"/></svg>
                   Facebook
-                </button>
+                </a>
               </div>
 
               <p class="auth__foot">New user? <a href="register.html">Create an account</a></p>

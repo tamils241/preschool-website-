@@ -65,32 +65,32 @@
               <div class="form-grid">
                 <div class="field">
                   <label for="regFirst">First name <span class="req">*</span></label>
-                  <input type="text" id="regFirst" name="firstName" required autocomplete="given-name" placeholder="Jane" />
+                  <input type="text" id="regFirst" name="firstName" data-label="First name" minlength="2" maxlength="16" pattern="[A-Za-z]+" data-alpha-only required autocomplete="given-name" placeholder="Jane" />
                   <span class="error" data-error></span>
                 </div>
                 <div class="field">
                   <label for="regLast">Last name <span class="req">*</span></label>
-                  <input type="text" id="regLast" name="lastName" required autocomplete="family-name" placeholder="Doe" />
+                  <input type="text" id="regLast" name="lastName" data-label="Last name" minlength="2" maxlength="16" pattern="[A-Za-z]+" data-alpha-only required autocomplete="family-name" placeholder="Doe" />
                   <span class="error" data-error></span>
                 </div>
                 <div class="field">
                   <label for="regEmail">Email address <span class="req">*</span></label>
-                  <input type="email" id="regEmail" name="email" required autocomplete="email" placeholder="you@example.com" />
+                  <input type="email" id="regEmail" name="email" data-label="Email address" required autocomplete="email" placeholder="you@example.com" />
                   <span class="error" data-error></span>
                 </div>
                 <div class="field">
                   <label for="regPhone">Phone number <span class="req">*</span></label>
-                  <input type="tel" id="regPhone" name="phone" required autocomplete="tel" placeholder="+1 (555) 000-0000" />
+                  <input type="tel" id="regPhone" name="phone" data-label="Phone number" maxlength="10" pattern="[0-9]{10}" data-digits="10" required autocomplete="tel" placeholder="10-digit number" />
                   <span class="error" data-error></span>
                 </div>
                 <div class="field">
                   <label for="regChild">Child's name <span class="req">*</span></label>
-                  <input type="text" id="regChild" name="childName" required placeholder="Child's full name" />
+                  <input type="text" id="regChild" name="childName" data-label="Child's name" minlength="2" maxlength="16" pattern="[A-Za-z]+" data-alpha-only required placeholder="Child's name" />
                   <span class="error" data-error></span>
                 </div>
                 <div class="field">
                   <label for="regProgram">Program <span class="req">*</span></label>
-                  <select id="regProgram" name="program" required>
+                  <select id="regProgram" name="program" data-label="Program" required>
                     <option value="">Select a program</option>
                     <option value="toddler">Toddler Program</option>
                     <option value="playgroup">Playgroup</option>
@@ -103,7 +103,7 @@
                 <div class="field">
                   <label for="regPass">Password <span class="req">*</span></label>
                   <div class="pass-wrap">
-                    <input type="password" id="regPass" name="password" required minlength="8" autocomplete="new-password" placeholder="At least 8 characters" />
+                    <input type="password" id="regPass" name="password" data-label="Password" required minlength="8" data-strong-pass autocomplete="new-password" placeholder="8+ chars, upper, lower, number & symbol" />
                     <button type="button" class="pass-toggle" data-toggle-password aria-controls="regPass" aria-pressed="false" aria-label="Show password"></button>
                   </div>
                   <span class="error" data-error></span>
@@ -111,14 +111,14 @@
                 <div class="field">
                   <label for="regConfirm">Confirm password <span class="req">*</span></label>
                   <div class="pass-wrap">
-                    <input type="password" id="regConfirm" name="confirmPassword" required data-match="#regPass" data-match-msg="Passwords do not match." autocomplete="new-password" placeholder="Re-enter your password" />
+                    <input type="password" id="regConfirm" name="confirmPassword" data-label="Confirm password" required data-match="#regPass" data-match-msg="Passwords do not match." autocomplete="new-password" placeholder="Re-enter your password" />
                     <button type="button" class="pass-toggle" data-toggle-password aria-controls="regConfirm" aria-pressed="false" aria-label="Show password"></button>
                   </div>
                   <span class="error" data-error></span>
                 </div>
                 <div class="field field-check full">
-                  <input type="checkbox" id="regTerms" name="terms" required />
-                  <label for="regTerms">I agree to the <a href="terms.html">Terms &amp; Conditions</a> and <a href="privacy-policy.html">Privacy Policy</a>.</label>
+                  <input type="checkbox" id="regTerms" name="terms" data-label="Terms &amp; Conditions" data-required-msg="Please accept the Terms &amp; Conditions and Privacy Policy to continue." required />
+                  <label for="regTerms">I agree to the <a href="404.html">Terms &amp; Conditions</a> and <a href="404.html">Privacy Policy</a>.</label>
                   <span class="error" data-error></span>
                 </div>
               </div>
