@@ -144,7 +144,18 @@
     if (type === "date" && input.hasAttribute("data-no-past")) {
       var today = new Date();
       today.setHours(0, 0, 0, 0);
-      if (new Date(value) < today) return "Please choose today or a future date.";
+      var selected = new Date(value);
+      selected.setHours(0, 0, 0, 0);
+      if (selected < today) return "Please choose today or a future date.";
+    }
+
+    // Date not in the future
+    if (type === "date" && input.hasAttribute("data-no-future")) {
+      var today2 = new Date();
+      today2.setHours(0, 0, 0, 0);
+      var selected2 = new Date(value);
+      selected2.setHours(0, 0, 0, 0);
+      if (selected2 > today2) return "Please choose today or a past date.";
     }
 
     // Select with a placeholder option

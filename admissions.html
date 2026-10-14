@@ -109,31 +109,31 @@
           <div class="form-grid">
             <div class="field">
               <label for="childName">Child's full name <span class="req">*</span></label>
-              <input type="text" id="childName" name="childName" data-label="Child's full name" minlength="2" required autocomplete="off" />
+              <input type="text" id="childName" name="childName" data-label="Child's full name" minlength="2" maxlength="16" pattern="[A-Za-z]+" data-alpha-only required autocomplete="off" />
               <span class="error" data-error></span>
             </div>
 
             <div class="field">
               <label for="childDob">Child's date of birth <span class="req">*</span></label>
-              <input type="date" id="childDob" name="childDob" data-label="Date of birth" required />
+              <input type="date" id="childDob" name="childDob" data-label="Date of birth" data-no-future required />
               <span class="error" data-error></span>
             </div>
 
             <div class="field">
               <label for="parentName">Parent / guardian name <span class="req">*</span></label>
-              <input type="text" id="parentName" name="parentName" data-label="Parent or guardian name" minlength="2" required autocomplete="name" />
+              <input type="text" id="parentName" name="parentName" data-label="Parent or guardian name" minlength="2" maxlength="16" pattern="[A-Za-z]+" data-alpha-only required autocomplete="name" />
               <span class="error" data-error></span>
             </div>
 
             <div class="field">
               <label for="parentEmail">Email address <span class="req">*</span></label>
-              <input type="email" id="parentEmail" name="parentEmail" data-label="Email address" required autocomplete="email" />
+              <input type="email" id="parentEmail" name="parentEmail" data-label="Email address" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required autocomplete="email" />
               <span class="error" data-error></span>
             </div>
 
             <div class="field">
               <label for="parentPhone">Phone number <span class="req">*</span></label>
-              <input type="tel" id="parentPhone" name="parentPhone" data-label="Phone number" required autocomplete="tel" />
+              <input type="tel" id="parentPhone" name="parentPhone" data-label="Phone number" data-digits="10" required autocomplete="tel" />
               <span class="error" data-error></span>
             </div>
 
